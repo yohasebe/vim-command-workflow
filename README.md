@@ -1,10 +1,12 @@
-# Vim Command Workflow
+# Vim Command Alfred Workflow
 
 **An Alfred workflow to search Vim command cheat sheet + run commands**
 
 This is an Alfred workflow that searches a Vim command cheat sheet and sends vim commands directly to the frontmost application running Vim, Neovim, etc.
 
 It uses the data from the awesome multi-lingual Vim cheat sheet project [https://github.com/rtorr/vim-cheat-sheet](https://github.com/rtorr/vim-cheat-sheet).
+
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/source/img/screenshot-01.png?raw=true' width="700" />
 
 ## Installation
 
@@ -64,6 +66,8 @@ The command description can be displayed in one of the following languages, depe
 ### Separator Text
 
 You can set `separator` to any string you like, including emojis 😀.
+
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/source/img/screenshot-02.png?raw=true' width="700" />
 
 ### Order of Search Results
 
