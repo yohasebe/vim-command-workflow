@@ -35,6 +35,16 @@ locale_data  = JSON.parse(locale_json)
 
 data = base_data.deep_merge locale_data
 
+if locale == "us_en"
+  en_data = data
+else
+  en_json= File.read(File.join(dcurrent, "locales", "en_us.json"))
+  en_json.gsub!(/<[^<>]+>([^<>]+)<\/[^<>]+>/){$1}
+  en_json.gsub!(/\(\)/){""}
+  en_json.gsub!(/\([^\(\)]+\)/){""}
+  en_data = base_data.deep_merge(JSON.parse(en_json))
+end
+
 vim_cheatsheet = [
   # global
   {
@@ -42,6 +52,7 @@ vim_cheatsheet = [
     "catcode"=> "global",
     "category"=> data["global"]["title"],
     "desc" => data["global"]["commands"]["helpForKeyword"],
+    "search" => en_data["global"]["commands"]["helpForKeyword"],
     "ascript" => 'keystroke ":h"//key code 49//keystroke "keyword"',
   },
   {
@@ -49,6 +60,7 @@ vim_cheatsheet = [
     "catcode"=> "global",
     "category"=> data["global"]["title"],
     "desc" => data["global"]["commands"]["saveAsFile"],
+    "search" => en_data["global"]["commands"]["saveAsFile"],
     "ascript" => 'keystroke ":sav"//key code 49//keystroke "file"',
   },
   {
@@ -56,6 +68,7 @@ vim_cheatsheet = [
     "catcode"=> "global",
     "category"=> data["global"]["title"],
     "desc" => data["global"]["commands"]["closePane"],
+    "search" => en_data["global"]["commands"]["closePane"],
     "ascript" => 'keystroke ":clo" & return',
   },
   {
@@ -63,6 +76,7 @@ vim_cheatsheet = [
     "catcode"=> "global",
     "category"=> data["global"]["title"],
     "desc" => data["global"]["commands"]["colonTerminal"],
+    "search" => en_data["global"]["commands"]["colonTerminal"],
     "ascript" => 'keystroke ":ter" & return',
   },
   {
@@ -70,6 +84,7 @@ vim_cheatsheet = [
     "catcode"=> "global",
     "category"=> data["global"]["title"],
     "desc" => data["global"]["commands"]["K"],
+    "search" => en_data["global"]["commands"]["K"],
     "ascript" => 'keystroke "K"',
   },
   #cursorMovement
@@ -78,6 +93,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["h"],
+    "search" => en_data["cursorMovement"]["commands"]["h"],
     "ascript" => 'keystroke "h"',
   },
   {
@@ -85,6 +101,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["j"],
+    "search" => en_data["cursorMovement"]["commands"]["j"],
     "ascript" => 'keystroke "j"',
   },
   {
@@ -92,6 +109,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["k"],
+    "search" => en_data["cursorMovement"]["commands"]["k"],
     "ascript" => 'keystroke "k"',
   },
   {
@@ -99,6 +117,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["l"],
+    "search" => en_data["cursorMovement"]["commands"]["l"],
     "ascript" => 'keystroke "l"',
   },
   {
@@ -106,6 +125,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["gj"],
+    "search" => en_data["cursorMovement"]["commands"]["gj"],
     "ascript" => 'keystroke "gj"',
   },
   {
@@ -113,6 +133,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["gk"],
+    "search" => en_data["cursorMovement"]["commands"]["gk"],
     "ascript" => 'keystroke "gk"',
   },
   {
@@ -120,6 +141,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["H"],
+    "search" => en_data["cursorMovement"]["commands"]["H"],
     "ascript" => 'keystroke "H"',
   },
   {
@@ -127,6 +149,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["M"],
+    "search" => en_data["cursorMovement"]["commands"]["M"],
     "ascript" => 'keystroke "M"',
   },
   {
@@ -134,6 +157,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["L"],
+    "search" => en_data["cursorMovement"]["commands"]["L"],
     "ascript" => 'keystroke "L"',
   },
   {
@@ -141,6 +165,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["w"],
+    "search" => en_data["cursorMovement"]["commands"]["w"],
     "ascript" => 'keystroke "w"',
   },
   {
@@ -148,6 +173,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["W"],
+    "search" => en_data["cursorMovement"]["commands"]["W"],
     "ascript" => 'keystroke "W"',
   },
   {
@@ -155,6 +181,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["e"],
+    "search" => en_data["cursorMovement"]["commands"]["e"],
     "ascript" => 'keystroke "e"',
   },
   {
@@ -162,6 +189,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["E"],
+    "search" => en_data["cursorMovement"]["commands"]["E"],
     "ascript" => 'keystroke "E"',
   },
   {
@@ -169,6 +197,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["b"],
+    "search" => en_data["cursorMovement"]["commands"]["b"],
     "ascript" => 'keystroke "b"',
   },
   {
@@ -176,6 +205,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["B"],
+    "search" => en_data["cursorMovement"]["commands"]["B"],
     "ascript" => 'keystroke "B"',
   },
   {
@@ -183,6 +213,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["ge"],
+    "search" => en_data["cursorMovement"]["commands"]["ge"],
     "ascript" => 'keystroke "ge"',
   },
   {
@@ -190,6 +221,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["gE"],
+    "search" => en_data["cursorMovement"]["commands"]["gE"],
     "ascript" => 'keystroke "gE"',
   },
   {
@@ -197,6 +229,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["percent"],
+    "search" => en_data["cursorMovement"]["commands"]["percent"],
     "ascript" => 'keystroke "%"',
   },
   {
@@ -204,6 +237,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["zero"],
+    "search" => en_data["cursorMovement"]["commands"]["zero"],
     "ascript" => 'keystroke "0"',
   },
   {
@@ -211,6 +245,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["caret"],
+    "search" => en_data["cursorMovement"]["commands"]["caret"],
     "ascript" => 'keystroke "^"',
   },
   {
@@ -218,6 +253,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["dollar"],
+    "search" => en_data["cursorMovement"]["commands"]["dollar"],
     "ascript" => 'keystroke "$"',
   },
   {
@@ -225,6 +261,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["g_"],
+    "search" => en_data["cursorMovement"]["commands"]["g_"],
     "ascript" => 'keystroke "g_"',
   },
   {
@@ -232,6 +269,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["gg"],
+    "search" => en_data["cursorMovement"]["commands"]["gg"],
     "ascript" => 'keystroke "gg"',
   },
   {
@@ -239,6 +277,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["G"],
+    "search" => en_data["cursorMovement"]["commands"]["G"],
     "ascript" => 'keystroke "G"',
   },
   {
@@ -246,6 +285,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["fiveG"],
+    "search" => en_data["cursorMovement"]["commands"]["fiveG"],
     "ascript" => 'keystroke "5gg"',
   },
   {
@@ -253,6 +293,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["gd"],
+    "search" => en_data["cursorMovement"]["commands"]["gd"],
     "ascript" => 'keystroke "gd"',
   },
   {
@@ -260,6 +301,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["gD"],
+    "search" => en_data["cursorMovement"]["commands"]["gD"],
     "ascript" => 'keystroke "gD"',
   },
   {
@@ -267,6 +309,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["fx"],
+    "search" => en_data["cursorMovement"]["commands"]["fx"],
     "ascript" => 'keystroke "fx"',
   },
   {
@@ -274,6 +317,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["tx"],
+    "search" => en_data["cursorMovement"]["commands"]["tx"],
     "ascript" => 'keystroke "tx"',
   },
   {
@@ -281,6 +325,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["Fx"],
+    "search" => en_data["cursorMovement"]["commands"]["Fx"],
     "ascript" => 'keystroke "Fx"',
   },
   {
@@ -288,6 +333,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["Tx"],
+    "search" => en_data["cursorMovement"]["commands"]["Tx"],
     "ascript" => 'keystroke "Tx"',
   },
   {
@@ -295,6 +341,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["semicolon"],
+    "search" => en_data["cursorMovement"]["commands"]["semicolon"],
     "ascript" => 'keystroke ";"',
   },
   {
@@ -302,6 +349,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["comma"],
+    "search" => en_data["cursorMovement"]["commands"]["comma"],
     "ascript" => 'keystroke ","',
   },
   {
@@ -309,6 +357,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["closeCurlyBrace"],
+    "search" => en_data["cursorMovement"]["commands"]["closeCurlyBrace"],
     "ascript" => 'keystroke "}"',
   },
   {
@@ -316,6 +365,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["openCurlyBrace"],
+    "search" => en_data["cursorMovement"]["commands"]["openCurlyBrace"],
     "ascript" => 'keystroke "{"',
   },
   {
@@ -323,6 +373,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["centerCursor"],
+    "search" => en_data["cursorMovement"]["commands"]["centerCursor"],
     "ascript" => 'keystroke "zz"',
   },
   {
@@ -330,6 +381,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["CtrlPluse"],
+    "search" => en_data["cursorMovement"]["commands"]["CtrlPluse"],
     "ascript" => 'keystroke "e" using control down',
   },
   {
@@ -337,6 +389,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["CtrlPlusy"],
+    "search" => en_data["cursorMovement"]["commands"]["CtrlPlusy"],
     "ascript" => 'keystroke "y" using control down',
   },
   {
@@ -344,6 +397,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["CtrlPlusb"],
+    "search" => en_data["cursorMovement"]["commands"]["CtrlPlusb"],
     "ascript" => 'keystroke "b" using control down',
   },
   {
@@ -351,6 +405,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["CtrlPlusf"],
+    "search" => en_data["cursorMovement"]["commands"]["CtrlPlusf"],
     "ascript" => 'keystroke "f" using control down',
   },
   {
@@ -358,6 +413,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["CtrlPlusu"],
+    "search" => en_data["cursorMovement"]["commands"]["CtrlPlusu"],
     "ascript" => 'keystroke "u" using control down',
   },
   {
@@ -365,6 +421,7 @@ vim_cheatsheet = [
     "catcode"=> "cursorMovement",
     "category"=> data["cursorMovement"]["title"],
     "desc" => data["cursorMovement"]["commands"]["CtrlPlusd"],
+    "search" => en_data["cursorMovement"]["commands"]["CtrlPlusd"],
     "ascript" => 'keystroke "d" using control down',
   },
   # 'insertMode.title'
@@ -373,6 +430,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["i"],
+    "search" => en_data["insertMode"]["commands"]["i"],
     "ascript" => 'keystroke "i"',
   },
   {
@@ -380,6 +438,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["I"],
+    "search" => en_data["insertMode"]["commands"]["I"],
     "ascript" => 'keystroke "I"',
   },
   {
@@ -387,6 +446,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["a"],
+    "search" => en_data["insertMode"]["commands"]["a"],
     "ascript" => 'keystroke "a"',
   },
   {
@@ -394,6 +454,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["A"],
+    "search" => en_data["insertMode"]["commands"]["A"],
     "ascript" => 'keystroke "A"',
   },
   {
@@ -401,6 +462,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["o"],
+    "search" => en_data["insertMode"]["commands"]["o"],
     "ascript" => 'keystroke "o"',
   },
   {
@@ -408,6 +470,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["O"],
+    "search" => en_data["insertMode"]["commands"]["O"],
     "ascript" => 'keystroke "O"',
   },
   {
@@ -415,6 +478,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ea"],
+    "search" => en_data["insertMode"]["commands"]["ea"],
     "ascript" => 'keystroke "ea"',
   },
   {
@@ -422,6 +486,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlush"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlush"],
     "ascript" => 'keystroke "h" using control down',
   },
   {
@@ -429,6 +494,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusw"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusw"],
     "ascript" => 'keystroke "w" using control down',
   },
   {
@@ -436,6 +502,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusj"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusj"],
     "ascript" => 'keystroke "j" using control down',
   },
   {
@@ -443,6 +510,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlust"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlust"],
     "ascript" => 'keystroke "t" using control down',
   },
   {
@@ -450,6 +518,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlust"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlust"],
     "ascript" => 'keystroke "t" using control down',
   },
   {
@@ -457,6 +526,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusd"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusd"],
     "ascript" => 'keystroke "d" using control down',
   },
   {
@@ -464,6 +534,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusn"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusn"],
     "ascript" => 'keystroke "n" using control down',
   },
   {
@@ -471,6 +542,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusp"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusp"],
     "ascript" => 'keystroke "p" using control down',
   },
   {
@@ -478,6 +550,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusrx"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusrx"],
     "ascript" => 'keystroke "r" using control down//keystroke "x"',
   },
   {
@@ -485,6 +558,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["ctrlPlusox"],
+    "search" => en_data["insertMode"]["commands"]["ctrlPlusox"],
     "ascript" => 'keystroke "o" using control down//keystroke "x"',
   },
   {
@@ -492,6 +566,7 @@ vim_cheatsheet = [
     "catcode"=> "insertMode",
     "category"=> data["insertMode"]["title"],
     "desc" => data["insertMode"]["commands"]["Esc"],
+    "search" => en_data["insertMode"]["commands"]["Esc"],
     "ascript" => 'key code 53',
   },
   # 'editing.title'
@@ -500,6 +575,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["r"],
+    "search" => en_data["editing"]["commands"]["r"],
     "ascript" => 'keystroke "r"',
   },
   {
@@ -507,6 +583,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["R"],
+    "search" => en_data["editing"]["commands"]["R"],
     "ascript" => 'keystroke "R"',
   },
   {
@@ -514,6 +591,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["J"],
+    "search" => en_data["editing"]["commands"]["J"],
     "ascript" => 'keystroke "J"',
   },
   {
@@ -521,6 +599,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["gJ"],
+    "search" => en_data["editing"]["commands"]["gJ"],
     "ascript" => 'keystroke "gJ"',
   },
   {
@@ -528,6 +607,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["gwip"],
+    "search" => en_data["editing"]["commands"]["gwip"],
     "ascript" => 'keystroke "gwip"',
   },
   {
@@ -535,6 +615,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["gTilde"],
+    "search" => en_data["editing"]["commands"]["gTilde"],
     "ascript" => 'keystroke "g~"',
   },
   {
@@ -542,6 +623,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["gu"],
+    "search" => en_data["editing"]["commands"]["gu"],
     "ascript" => 'keystroke "gu"',
   },
   {
@@ -549,6 +631,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["gU"],
+    "search" => en_data["editing"]["commands"]["gU"],
     "ascript" => 'keystroke "gU"',
   },
   {
@@ -556,6 +639,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["cc"],
+    "search" => en_data["editing"]["commands"]["cc"],
     "ascript" => 'keystroke "cc"',
   },
   {
@@ -563,6 +647,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["cDollar"],
+    "search" => en_data["editing"]["commands"]["cDollar"],
     "ascript" => 'keystroke "g$"',
   },
   {
@@ -570,6 +655,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["ciw"],
+    "search" => en_data["editing"]["commands"]["ciw"],
     "ascript" => 'keystroke "ciw"',
   },
   {
@@ -577,6 +663,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["cw"],
+    "search" => en_data["editing"]["commands"]["cw"],
     "ascript" => 'keystroke "cw"',
   },
   {
@@ -584,6 +671,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["s"],
+    "search" => en_data["editing"]["commands"]["s"],
     "ascript" => 'keystroke "s"',
   },
   {
@@ -591,6 +679,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["S"],
+    "search" => en_data["editing"]["commands"]["S"],
     "ascript" => 'keystroke "S"',
   },
   {
@@ -598,6 +687,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["xp"],
+    "search" => en_data["editing"]["commands"]["xp"],
     "ascript" => 'keystroke "xp"',
   },
   {
@@ -605,6 +695,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["u"],
+    "search" => en_data["editing"]["commands"]["u"],
     "ascript" => 'keystroke "u"',
   },
   {
@@ -612,6 +703,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["U"],
+    "search" => en_data["editing"]["commands"]["U"],
     "ascript" => 'keystroke "U"',
   },
   {
@@ -619,6 +711,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["CtrlPlusr"],
+    "search" => en_data["editing"]["commands"]["CtrlPlusr"],
     "ascript" => 'keystroke "r" using control down',
   },
   {
@@ -626,6 +719,7 @@ vim_cheatsheet = [
     "catcode"=> "editing",
     "category"=> data["editing"]["title"],
     "desc" => data["editing"]["commands"]["dot"],
+    "search" => en_data["editing"]["commands"]["dot"],
     "ascript" => 'keystroke "."',
   },
   # 'markingText.title'
@@ -634,6 +728,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["v"],
+    "search" => en_data["markingText"]["commands"]["v"],
     "ascript" => 'keystroke "v"',
   },
   {
@@ -641,6 +736,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["V"],
+    "search" => en_data["markingText"]["commands"]["V"],
     "ascript" => 'keystroke "V"',
   },
   {
@@ -648,6 +744,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["o"],
+    "search" => en_data["markingText"]["commands"]["o"],
     "ascript" => 'keystroke "o"',
   },
   {
@@ -655,6 +752,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["CtrlPlusv"],
+    "search" => en_data["markingText"]["commands"]["CtrlPlusv"],
     "ascript" => 'keystroke "v" using control down',
   },
   {
@@ -662,6 +760,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["O"],
+    "search" => en_data["markingText"]["commands"]["O"],
     "ascript" => 'keystroke "O"',
   },
   {
@@ -669,6 +768,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["aw"],
+    "search" => en_data["markingText"]["commands"]["aw"],
     "ascript" => 'keystroke "aw"',
   },
   {
@@ -676,6 +776,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["ab"],
+    "search" => en_data["markingText"]["commands"]["ab"],
     "ascript" => 'keystroke "ab"',
   },
   {
@@ -683,6 +784,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["aB"],
+    "search" => en_data["markingText"]["commands"]["aB"],
     "ascript" => 'keystroke "aB"',
   },
   {
@@ -690,6 +792,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["at"],
+    "search" => en_data["markingText"]["commands"]["at"],
     "ascript" => 'keystroke "at"',
   },
   {
@@ -697,6 +800,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["ib"],
+    "search" => en_data["markingText"]["commands"]["ib"],
     "ascript" => 'keystroke "ib"',
   },
   {
@@ -704,6 +808,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["iB"],
+    "search" => en_data["markingText"]["commands"]["iB"],
     "ascript" => 'keystroke "iB"',
   },
   {
@@ -711,6 +816,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["it"],
+    "search" => en_data["markingText"]["commands"]["it"],
     "ascript" => 'keystroke "it"',
   },
   {
@@ -718,6 +824,7 @@ vim_cheatsheet = [
     "catcode"=> "markingText",
     "category"=> data["markingText"]["title"],
     "desc" => data["markingText"]["commands"]["Esc"],
+    "search" => en_data["markingText"]["commands"]["Esc"],
     "ascript" => 'key code 53',
   },
   # 'visualCommands.title'
@@ -726,6 +833,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["greaterThan"],
+    "search" => en_data["visualCommands"]["commands"]["greaterThan"],
     "ascript" => 'keystroke ">"',
   },
   {
@@ -733,6 +841,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["lessThan"],
+    "search" => en_data["visualCommands"]["commands"]["lessThan"],
     "ascript" => 'keystroke "<"',
   },
   {
@@ -740,6 +849,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["y"],
+    "search" => en_data["visualCommands"]["commands"]["y"],
     "ascript" => 'keystroke "y"',
   },
   {
@@ -747,6 +857,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["d"],
+    "search" => en_data["visualCommands"]["commands"]["d"],
     "ascript" => 'keystroke "d"',
   },
   {
@@ -754,6 +865,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["tilde"],
+    "search" => en_data["visualCommands"]["commands"]["tilde"],
     "ascript" => 'keystroke "~"',
   },
   {
@@ -761,6 +873,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["u"],
+    "search" => en_data["visualCommands"]["commands"]["u"],
     "ascript" => 'keystroke "u"',
   },
   {
@@ -768,6 +881,7 @@ vim_cheatsheet = [
     "catcode"=> "visualCommands",
     "category"=> data["visualCommands"]["title"],
     "desc" => data["visualCommands"]["commands"]["U"],
+    "search" => en_data["visualCommands"]["commands"]["U"],
     "ascript" => 'keystroke "U"',
   },
   # 'registers.title'
@@ -776,6 +890,7 @@ vim_cheatsheet = [
     "catcode"=> "registers",
     "category"=> data["registers"]["title"],
     "desc" => data["registers"]["commands"]["show"],
+    "search" => en_data["registers"]["commands"]["show"],
     "ascript" => 'keystroke ":reg" & return',
   },
   {
@@ -783,6 +898,7 @@ vim_cheatsheet = [
     "catcode"=> "registers",
     "category"=> data["registers"]["title"],
     "desc" => data["registers"]["commands"]["yankIntoRegisterX"],
+    "search" => en_data["registers"]["commands"]["yankIntoRegisterX"],
     "ascript" => 'keystroke "xy"',
   },
   {
@@ -790,6 +906,7 @@ vim_cheatsheet = [
     "catcode"=> "registers",
     "category"=> data["registers"]["title"],
     "desc" => data["registers"]["commands"]["pasteRegisterX"],
+    "search" => en_data["registers"]["commands"]["pasteRegisterX"],
     "ascript" => 'keystroke "xp"',
   },
   {
@@ -797,6 +914,7 @@ vim_cheatsheet = [
     "catcode"=> "registers",
     "category"=> data["registers"]["title"],
     "desc" => data["registers"]["commands"]["quotePlusy"],
+    "search" => en_data["registers"]["commands"]["quotePlusy"],
     "ascript" => 'keystroke "+y"',
   },
   {
@@ -804,6 +922,7 @@ vim_cheatsheet = [
     "catcode"=> "registers",
     "category"=> data["registers"]["title"],
     "desc" => data["registers"]["commands"]["quotePlusp"],
+    "search" => en_data["registers"]["commands"]["quotePlusp"],
     "ascript" => 'keystroke "+p"',
   },
   # 'marks.title'
@@ -812,6 +931,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["currentPositionA"],
+    "search" => en_data["marks"]["commands"]["currentPositionA"],
     "ascript" => 'keystroke "ma"',
   },
   {
@@ -819,6 +939,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["jumpPositionA"],
+    "search" => en_data["marks"]["commands"]["jumpPositionA"],
     "ascript" => 'keystroke "`a"',
   },
   {
@@ -826,6 +947,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["yankToMarkA"],
+    "search" => en_data["marks"]["commands"]["yankToMarkA"],
     "ascript" => 'keystroke "y`a"',
   },
   {
@@ -833,6 +955,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["backtick0"],
+    "search" => en_data["marks"]["commands"]["backtick0"],
     "ascript" => 'keystroke "`0"',
   },
   {
@@ -840,6 +963,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["backtickQuote"],
+    "search" => en_data["marks"]["commands"]["backtickQuote"],
     "ascript" => 'keystroke "`\""',
   },
   {
@@ -847,6 +971,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["backtickDot"],
+    "search" => en_data["marks"]["commands"]["backtickDot"],
     "ascript" => 'keystroke "`."',
   },
   {
@@ -854,6 +979,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["backtickBacktick"],
+    "search" => en_data["marks"]["commands"]["backtickBacktick"],
     "ascript" => 'keystroke "``"',
   },
   {
@@ -861,6 +987,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["colonjumps"],
+    "search" => en_data["marks"]["commands"]["colonjumps"],
     "ascript" => 'keystroke ":ju" & return',
   },
   {
@@ -868,6 +995,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["ctrlPlusi"],
+    "search" => en_data["marks"]["commands"]["ctrlPlusi"],
     "ascript" => 'keystroke "i" using control down',
   },
   {
@@ -875,6 +1003,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["ctrlPluso"],
+    "search" => en_data["marks"]["commands"]["ctrlPluso"],
     "ascript" => 'keystroke "o" using control down',
   },
   {
@@ -882,6 +1011,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["colonchanges"],
+    "search" => en_data["marks"]["commands"]["colonchanges"],
     "ascript" => 'keystroke ":changes" & return',
   },
   {
@@ -889,6 +1019,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["gcomma"],
+    "search" => en_data["marks"]["commands"]["gcomma"],
     "ascript" => 'keystroke "g,"',
   },
   {
@@ -896,6 +1027,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["gsemicolon"],
+    "search" => en_data["marks"]["commands"]["gsemicolon"],
     "ascript" => 'keystroke "g;"',
   },
   {
@@ -903,6 +1035,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["ctrlPlusCloseSquare"],
+    "search" => en_data["marks"]["commands"]["ctrlPlusCloseSquare"],
     "ascript" => 'keystroke "]" using control down',
   },
   {
@@ -910,6 +1043,7 @@ vim_cheatsheet = [
     "catcode"=> "marks",
     "category"=> data["marks"]["title"],
     "desc" => data["marks"]["commands"]["gf"],
+    "search" => en_data["marks"]["commands"]["gf"],
     "ascript" => 'keystroke "gf"',
   },
   # 'macros.title'
@@ -918,6 +1052,7 @@ vim_cheatsheet = [
     "catcode"=> "macros",
     "category"=> data["macros"]["title"],
     "desc" => data["macros"]["commands"]["recordA"],
+    "search" => en_data["macros"]["commands"]["recordA"],
     "ascript" => 'keystroke "qa"',
   },
   {
@@ -925,6 +1060,7 @@ vim_cheatsheet = [
     "catcode"=> "macros",
     "category"=> data["macros"]["title"],
     "desc" => data["macros"]["commands"]["stopRecording"],
+    "search" => en_data["macros"]["commands"]["stopRecording"],
     "ascript" => 'keystroke "q"',
   },
   {
@@ -932,6 +1068,7 @@ vim_cheatsheet = [
     "catcode"=> "macros",
     "category"=> data["macros"]["title"],
     "desc" => data["macros"]["commands"]["runA"],
+    "search" => en_data["macros"]["commands"]["runA"],
     "ascript" => 'keystroke "@a"',
   },
   {
@@ -939,6 +1076,7 @@ vim_cheatsheet = [
     "catcode"=> "macros",
     "category"=> data["macros"]["title"],
     "desc" => data["macros"]["commands"]["rerun"],
+    "search" => en_data["macros"]["commands"]["rerun"],
     "ascript" => 'keystroke "@@"',
   },
 
@@ -948,6 +1086,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["yy"],
+    "search" => en_data["cutAndPaste"]["commands"]["yy"],
     "ascript" => 'keystroke "yy"',
   },
   {
@@ -955,6 +1094,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["twoyy"],
+    "search" => en_data["cutAndPaste"]["commands"]["twoyy"],
     "ascript" => 'keystroke "2yy"',
   },
   {
@@ -962,6 +1102,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["yw"],
+    "search" => en_data["cutAndPaste"]["commands"]["yw"],
     "ascript" => 'keystroke "yw"',
   },
   {
@@ -969,6 +1110,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["yiw"],
+    "search" => en_data["cutAndPaste"]["commands"]["yiw"],
     "ascript" => 'keystroke "yiw"',
   },
   {
@@ -976,6 +1118,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["yaw"],
+    "search" => en_data["cutAndPaste"]["commands"]["yaw"],
     "ascript" => 'keystroke "yaw"',
   },
   {
@@ -983,6 +1126,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["yDollar"],
+    "search" => en_data["cutAndPaste"]["commands"]["yDollar"],
     "ascript" => 'keystroke "y$"',
   },
   {
@@ -990,6 +1134,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["p"],
+    "search" => en_data["cutAndPaste"]["commands"]["p"],
     "ascript" => 'keystroke "p"',
   },
   {
@@ -997,6 +1142,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["P"],
+    "search" => en_data["cutAndPaste"]["commands"]["P"],
     "ascript" => 'keystroke "P"',
   },
   {
@@ -1004,6 +1150,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["gp"],
+    "search" => en_data["cutAndPaste"]["commands"]["gp"],
     "ascript" => 'keystroke "gp"',
   },
   {
@@ -1011,6 +1158,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["gP"],
+    "search" => en_data["cutAndPaste"]["commands"]["gP"],
     "ascript" => 'keystroke "gP"',
   },
   {
@@ -1018,6 +1166,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["dd"],
+    "search" => en_data["cutAndPaste"]["commands"]["dd"],
     "ascript" => 'keystroke "dd"',
   },
   {
@@ -1025,6 +1174,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["twodd"],
+    "search" => en_data["cutAndPaste"]["commands"]["twodd"],
     "ascript" => 'keystroke "2dd"',
   },
   {
@@ -1032,6 +1182,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["dw"],
+    "search" => en_data["cutAndPaste"]["commands"]["dw"],
     "ascript" => 'keystroke "dw"',
   },
   {
@@ -1039,6 +1190,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["diw"],
+    "search" => en_data["cutAndPaste"]["commands"]["diw"],
     "ascript" => 'keystroke "diw"',
   },
   {
@@ -1046,6 +1198,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["daw"],
+    "search" => en_data["cutAndPaste"]["commands"]["daw"],
     "ascript" => 'keystroke "daw"',
   },
   {
@@ -1053,6 +1206,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["dDollar"],
+    "search" => en_data["cutAndPaste"]["commands"]["dDollar"],
     "ascript" => 'keystroke "d$"',
   },
   {
@@ -1060,6 +1214,7 @@ vim_cheatsheet = [
     "catcode"=> "cutAndPaste",
     "category"=> data["cutAndPaste"]["title"],
     "desc" => data["cutAndPaste"]["commands"]["x"],
+    "search" => en_data["cutAndPaste"]["commands"]["x"],
     "ascript" => 'keystroke "x"',
   },
   # 'indentText.title'
@@ -1068,6 +1223,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["greaterThanGreaterThan"],
+    "search" => en_data["indentText"]["commands"]["greaterThanGreaterThan"],
     "ascript" => 'keystroke ">>"',
   },
   {
@@ -1075,6 +1231,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["lessThanLessThan"],
+    "search" => en_data["indentText"]["commands"]["lessThanLessThan"],
     "ascript" => 'keystroke "<<"',
   },
   {
@@ -1082,6 +1239,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["greaterThanPercent"],
+    "search" => en_data["indentText"]["commands"]["greaterThanPercent"],
     "ascript" => 'keystroke ">%"',
   },
   {
@@ -1089,6 +1247,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["greaterThanib"],
+    "search" => en_data["indentText"]["commands"]["greaterThanib"],
     "ascript" => 'keystroke ">ib"',
   },
   {
@@ -1096,6 +1255,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["greaterThanat"],
+    "search" => en_data["indentText"]["commands"]["greaterThanat"],
     "ascript" => 'keystroke ">at"',
   },
   {
@@ -1103,6 +1263,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["3=="],
+    "search" => en_data["indentText"]["commands"]["3=="],
     "ascript" => 'keystroke "3=="',
   },
   {
@@ -1110,6 +1271,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["=Percent"],
+    "search" => en_data["indentText"]["commands"]["=Percent"],
     "ascript" => 'keystroke "=%"',
   },
   {
@@ -1117,6 +1279,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["iB"],
+    "search" => en_data["indentText"]["commands"]["iB"],
     "ascript" => 'keystroke "iB"',
   },
   {
@@ -1124,6 +1287,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["gg=G"],
+    "search" => en_data["indentText"]["commands"]["gg=G"],
     "ascript" => 'keystroke "gg=G"',
   },
   {
@@ -1131,6 +1295,7 @@ vim_cheatsheet = [
     "catcode"=> "indentText",
     "category"=> data["indentText"]["title"],
     "desc" => data["indentText"]["commands"]["closeSquarep"],
+    "search" => en_data["indentText"]["commands"]["closeSquarep"],
     "ascript" => 'keystroke "]p"',
   },
   # 'exiting.title'
@@ -1139,6 +1304,7 @@ vim_cheatsheet = [
     "catcode"=> "exiting",
     "category"=> data["exiting"]["title"],
     "desc" => data["exiting"]["commands"]["colonw"],
+    "search" => en_data["exiting"]["commands"]["colonw"],
     "ascript" => 'keystroke ":w" & return',
   },
   {
@@ -1146,6 +1312,7 @@ vim_cheatsheet = [
     "catcode"=> "exiting",
     "category"=> data["exiting"]["title"],
     "desc" => data["exiting"]["commands"]["colonwsudo"],
+    "search" => en_data["exiting"]["commands"]["colonwsudo"],
     "ascript" => 'keystroke ":w !sudo tee %"',
   },
   {
@@ -1153,6 +1320,7 @@ vim_cheatsheet = [
     "catcode"=> "exiting",
     "category"=> data["exiting"]["title"],
     "desc" => data["exiting"]["commands"]["colonwq"],
+    "search" => en_data["exiting"]["commands"]["colonwq"],
     "ascript" => 'keystroke ":wq" & return',
   },
   {
@@ -1160,6 +1328,7 @@ vim_cheatsheet = [
     "catcode"=> "exiting",
     "category"=> data["exiting"]["title"],
     "desc" => data["exiting"]["commands"]["colonq"],
+    "search" => en_data["exiting"]["commands"]["colonq"],
     "ascript" => 'keystroke ":q" & return',
   },
   {
@@ -1167,6 +1336,7 @@ vim_cheatsheet = [
     "catcode"=> "exiting",
     "category"=> data["exiting"]["title"],
     "desc" => data["exiting"]["commands"]["colonqbang"],
+    "search" => en_data["exiting"]["commands"]["colonqbang"],
     "ascript" => 'keystroke ":q!" & return',
   },
   {
@@ -1174,6 +1344,7 @@ vim_cheatsheet = [
     "catcode"=> "exiting",
     "category"=> data["exiting"]["title"],
     "desc" => data["exiting"]["commands"]["colonwqa"],
+    "search" => en_data["exiting"]["commands"]["colonwqa"],
     "ascript" => 'keystroke ":wqa" & return',
   },
   #'searchAndReplace.title'
@@ -1182,6 +1353,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["forwardSlashPattern"],
+    "search" => en_data["searchAndReplace"]["commands"]["forwardSlashPattern"],
     "ascript" => 'keystroke "/pattern"',
   },
   {
@@ -1189,6 +1361,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["questionMarkPattern"],
+    "search" => en_data["searchAndReplace"]["commands"]["questionMarkPattern"],
     "ascript" => 'keystroke "?pattern"',
   },
   {
@@ -1196,6 +1369,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["backslashVpattern"],
+    "search" => en_data["searchAndReplace"]["commands"]["backslashVpattern"],
     "ascript" => 'keystroke "\vpattern"',
   },
   {
@@ -1203,6 +1377,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["n"],
+    "search" => en_data["searchAndReplace"]["commands"]["n"],
     "ascript" => 'keystroke "n"',
   },
   {
@@ -1210,6 +1385,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["N"],
+    "search" => en_data["searchAndReplace"]["commands"]["N"],
     "ascript" => 'keystroke "N"',
   },
   {
@@ -1217,6 +1393,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["colonPercentForwardSlashOldForwardSlashNewForwardSlashg"],
+    "search" => en_data["searchAndReplace"]["commands"]["colonPercentForwardSlashOldForwardSlashNewForwardSlashg"],
     "ascript" => 'keystroke ":%s/old/new/g"',
   },
   {
@@ -1224,6 +1401,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["colonPercentForwardSlashOldForwardSlashNewForwardSlashgc"],
+    "search" => en_data["searchAndReplace"]["commands"]["colonPercentForwardSlashOldForwardSlashNewForwardSlashgc"],
     "ascript" => 'keystroke ":%s/old/new/gc"',
   },
   {
@@ -1231,6 +1409,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["colonnoh"],
+    "search" => en_data["searchAndReplace"]["commands"]["colonnoh"],
     "ascript" => 'keystroke ":noh[lsearch]"',
   },
   {
@@ -1238,6 +1417,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["asterisk"],
+    "search" => en_data["searchAndReplace"]["commands"]["asterisk"],
     "ascript" => 'keystroke "*"',
   },
   {
@@ -1245,6 +1425,7 @@ vim_cheatsheet = [
     "catcode"=> "searchAndReplace",
     "category"=> data["searchAndReplace"]["title"],
     "desc" => data["searchAndReplace"]["commands"]["hash"],
+    "search" => en_data["searchAndReplace"]["commands"]["hash"],
     "ascript" => 'keystroke "#"',
   },
   # 'searchMultipleFiles.title'
@@ -1253,6 +1434,7 @@ vim_cheatsheet = [
     "catcode"=> "searchMultipleFiles",
     "category"=> data["searchMultipleFiles"]["title"],
     "desc" => data["searchMultipleFiles"]["commands"]["colonvimgrep"],
+    "search" => en_data["searchMultipleFiles"]["commands"]["colonvimgrep"],
     "ascript" => 'keystroke ":vim[grep]"//key code 49//keystroke "/pattern/"//key code 49//keystroke "file"',
   },
   {
@@ -1260,6 +1442,7 @@ vim_cheatsheet = [
     "catcode"=> "searchMultipleFiles",
     "category"=> data["searchMultipleFiles"]["title"],
     "desc" => data["searchMultipleFiles"]["commands"]["coloncn"],
+    "search" => en_data["searchMultipleFiles"]["commands"]["coloncn"],
     "ascript" => 'keystroke ":cn" & return',
   },
   {
@@ -1267,6 +1450,7 @@ vim_cheatsheet = [
     "catcode"=> "searchMultipleFiles",
     "category"=> data["searchMultipleFiles"]["title"],
     "desc" => data["searchMultipleFiles"]["commands"]["coloncp"],
+    "search" => en_data["searchMultipleFiles"]["commands"]["coloncp"],
     "ascript" => 'keystroke ":cp" & return',
   },
   {
@@ -1274,6 +1458,7 @@ vim_cheatsheet = [
     "catcode"=> "searchMultipleFiles",
     "category"=> data["searchMultipleFiles"]["title"],
     "desc" => data["searchMultipleFiles"]["commands"]["coloncopen"],
+    "search" => en_data["searchMultipleFiles"]["commands"]["coloncopen"],
     "ascript" => 'keystroke ":cope" & return',
   },
   {
@@ -1281,6 +1466,7 @@ vim_cheatsheet = [
     "catcode"=> "searchMultipleFiles",
     "category"=> data["searchMultipleFiles"]["title"],
     "desc" => data["searchMultipleFiles"]["commands"]["coloncclose"],
+    "search" => en_data["searchMultipleFiles"]["commands"]["coloncclose"],
     "ascript" => 'keystroke ":ccl" & return',
   },
   #'tabs.title'
@@ -1289,6 +1475,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["coloncclose"],
+    "search" => en_data["tabs"]["commands"]["coloncclose"],
     "ascript" => 'keystroke ":tabnew"//key code 49//keystroke "file" & return',
   },
   {
@@ -1296,6 +1483,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["ctrlPluswT"],
+    "search" => en_data["tabs"]["commands"]["ctrlPluswT"],
     "ascript" => 'keystroke "w" using control down//keystroke "T"',
   },
   {
@@ -1303,6 +1491,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["gt"],
+    "search" => en_data["tabs"]["commands"]["gt"],
     "ascript" => 'keystroke "gt"',
   },
   {
@@ -1310,6 +1499,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["gT"],
+    "search" => en_data["tabs"]["commands"]["gT"],
     "ascript" => 'keystroke "gT"',
   },
   {
@@ -1317,6 +1507,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["hashgt"],
+    "search" => en_data["tabs"]["commands"]["hashgt"],
     "ascript" => 'keystroke "#gt"',
   },
   {
@@ -1324,6 +1515,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["colontabmove"],
+    "search" => en_data["tabs"]["commands"]["colontabmove"],
     "ascript" => 'keystroke ":tabm" & return',
   },
   {
@@ -1331,6 +1523,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["colontabc"],
+    "search" => en_data["tabs"]["commands"]["colontabc"],
     "ascript" => 'keystroke ":tabc" & return',
   },
   {
@@ -1338,6 +1531,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["colontabo"],
+    "search" => en_data["tabs"]["commands"]["colontabo"],
     "ascript" => 'keystroke ":tabo" & return',
   },
   {
@@ -1345,6 +1539,7 @@ vim_cheatsheet = [
     "catcode"=> "tabs",
     "category"=> data["tabs"]["title"],
     "desc" => data["tabs"]["commands"]["colontabdo"],
+    "search" => en_data["tabs"]["commands"]["colontabdo"],
     "ascript" => 'keystroke ":tabdo"//key code 49//keystroke "command"',
   },
   # 'workingWithMultipleFiles.title'
@@ -1353,6 +1548,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colone"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colone"],
     "ascript" => 'keystroke ":e"//key code 49//keystroke "file"',
   },
   {
@@ -1360,6 +1556,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonbnext"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonbnext"],
     "ascript" => 'keystroke ":bn" & return',
   },
   {
@@ -1367,6 +1564,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonbprev"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonbprev"],
     "ascript" => 'keystroke ":bp" & return',
   },
   {
@@ -1374,6 +1572,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonbd"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonbd"],
     "ascript" => 'keystroke ":bd" & return',
   },
   {
@@ -1381,6 +1580,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonbnumber"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonbnumber"],
     "ascript" => 'keystroke ":b#"',
   },
   {
@@ -1388,6 +1588,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonbfile"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonbfile"],
     "ascript" => 'keystroke ":b"//key code 49//keystroke "file"',
   },
   {
@@ -1395,6 +1596,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonls"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonls"],
     "ascript" => 'keystroke ":ls" & return',
   },
   {
@@ -1402,6 +1604,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonsp"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonsp"],
     "ascript" => 'keystroke ":sp"//key code 49//keystroke "file"',
   },
   {
@@ -1409,6 +1612,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonvsp"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonvsp"],
     "ascript" => 'keystroke ":vs"//key code 49//keystroke "file"',
   },
   {
@@ -1416,6 +1620,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colonvertba"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colonvertba"],
     "ascript" => 'keystroke ":vert"//key code 49//keystroke "ba" & return',
   },
   {
@@ -1423,6 +1628,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["colontabba"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["colontabba"],
     "ascript" => 'keystroke ":tab"//key code 49//keystroke "ba" & return',
   },
   {
@@ -1430,6 +1636,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPlusws"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPlusws"],
     "ascript" => 'keystroke "w" using control down//keystroke "s"',
   },
   {
@@ -1437,6 +1644,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswv"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswv"],
     "ascript" => 'keystroke "w" using control down//keystroke "v"',
   },
   {
@@ -1444,6 +1652,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPlusww"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPlusww"],
     "ascript" => 'keystroke "w" using control down//keystroke "w"',
   },
   {
@@ -1451,6 +1660,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswq"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswq"],
     "ascript" => 'keystroke "w" using control down//keystroke "q"',
   },
   {
@@ -1458,6 +1668,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswx"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswx"],
     "ascript" => 'keystroke "w" using control down//keystroke "x"',
   },
   {
@@ -1465,6 +1676,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPlusw="],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPlusw="],
     "ascript" => 'keystroke "w" using control down//keystroke "="',
   },
   {
@@ -1472,6 +1684,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswh"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswh"],
     "ascript" => 'keystroke "w" using control down//keystroke "h"',
   },
   {
@@ -1479,6 +1692,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswl"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswl"],
     "ascript" => 'keystroke "w" using control down//keystroke "l"',
   },
   {
@@ -1486,6 +1700,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswj"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswj"],
     "ascript" => 'keystroke "w" using control down//keystroke "j"',
   },
   {
@@ -1493,6 +1708,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswk"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswk"],
     "ascript" => 'keystroke "w" using control down//keystroke "k"',
   },
   {
@@ -1500,6 +1716,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswH"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswH"],
     "ascript" => 'keystroke "w" using control down//keystroke "H"',
   },
   {
@@ -1507,6 +1724,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswL"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswL"],
     "ascript" => 'keystroke "w" using control down//keystroke "L"',
   },
   {
@@ -1514,6 +1732,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswJ"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswJ"],
     "ascript" => 'keystroke "w" using control down//keystroke "J"',
   },
   {
@@ -1521,6 +1740,7 @@ vim_cheatsheet = [
     "catcode"=> "workingWithMultipleFiles",
     "category"=> data["workingWithMultipleFiles"]["title"],
     "desc" => data["workingWithMultipleFiles"]["commands"]["ctrlPluswK"],
+    "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswK"],
     "ascript" => 'keystroke "w" using control down//keystroke "K"',
   },
   # 'diff.title'
@@ -1529,6 +1749,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zf"],
+    "search" => en_data["diff"]["commands"]["zf"],
     "ascript" => 'keystroke "zf"',
   },
   {
@@ -1536,6 +1757,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zd"],
+    "search" => en_data["diff"]["commands"]["zd"],
     "ascript" => 'keystroke "zd"',
   },
   {
@@ -1543,6 +1765,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["za"],
+    "search" => en_data["diff"]["commands"]["za"],
     "ascript" => 'keystroke "za"',
   },
   {
@@ -1550,6 +1773,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zo"],
+    "search" => en_data["diff"]["commands"]["zo"],
     "ascript" => 'keystroke "zo"',
   },
   {
@@ -1557,6 +1781,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zc"],
+    "search" => en_data["diff"]["commands"]["zc"],
     "ascript" => 'keystroke "zc"',
   },
   {
@@ -1564,6 +1789,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zr"],
+    "search" => en_data["diff"]["commands"]["zr"],
     "ascript" => 'keystroke "zr"',
   },
   {
@@ -1571,6 +1797,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zm"],
+    "search" => en_data["diff"]["commands"]["zm"],
     "ascript" => 'keystroke "zm"',
   },
   {
@@ -1578,6 +1805,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["zi"],
+    "search" => en_data["diff"]["commands"]["zi"],
     "ascript" => 'keystroke "zi"',
   },
   {
@@ -1585,6 +1813,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["closeSquarec"],
+    "search" => en_data["diff"]["commands"]["closeSquarec"],
     "ascript" => 'keystroke "]c"',
   },
   {
@@ -1592,6 +1821,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["openSquarec"],
+    "search" => en_data["diff"]["commands"]["openSquarec"],
     "ascript" => 'keystroke "[c"',
   },
   {
@@ -1599,6 +1829,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["do"],
+    "search" => en_data["diff"]["commands"]["do"],
     "ascript" => 'keystroke "do"',
   },
   {
@@ -1606,6 +1837,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["dp"],
+    "search" => en_data["diff"]["commands"]["dp"],
     "ascript" => 'keystroke "dp"',
   },
   {
@@ -1613,6 +1845,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["colonDiffthis"],
+    "search" => en_data["diff"]["commands"]["colonDiffthis"],
     "ascript" => 'keystroke ":diffthis" & return',
   },
   {
@@ -1620,6 +1853,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["colonDiffupdate"],
+    "search" => en_data["diff"]["commands"]["colonDiffupdate"],
     "ascript" => 'keystroke ":dif" & return',
   },
   {
@@ -1627,6 +1861,7 @@ vim_cheatsheet = [
     "catcode"=> "diff",
     "category"=> data["diff"]["title"],
     "desc" => data["diff"]["commands"]["colonDiffoff"],
+    "search" => en_data["diff"]["commands"]["colonDiffoff"],
     "ascript" => 'keystroke ":diffo" & return',
   },
   # spell
@@ -1635,6 +1870,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["setSpellEnUs"],
+    "search" => en_data["spell"]["commands"]["setSpellEnUs"],
     "ascript" => 'keystroke ":set"//key code 49//keystroke "spell"//key code 49//keystroke "spelllang=en_us" & return',
   },
   {
@@ -1642,6 +1878,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["setNoSpell"],
+    "search" => en_data["spell"]["commands"]["setNoSpell"],
     "ascript" => 'keystroke ":set"//key code 49//keystroke "nospell" & return',
   },
   {
@@ -1649,6 +1886,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["closeBrackets"],
+    "search" => en_data["spell"]["commands"]["closeBrackets"],
     "ascript" => 'keystroke "]s"',
   },
   {
@@ -1656,6 +1894,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["openBrackets"],
+    "search" => en_data["spell"]["commands"]["openBrackets"],
     "ascript" => 'keystroke "[s"',
   },
   {
@@ -1663,6 +1902,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["z="],
+    "search" => en_data["spell"]["commands"]["z="],
     "ascript" => 'keystroke "z="',
   },
   {
@@ -1670,6 +1910,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["zg"],
+    "search" => en_data["spell"]["commands"]["zg"],
     "ascript" => 'keystroke "zg"',
   },
   {
@@ -1677,6 +1918,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["zw"],
+    "search" => en_data["spell"]["commands"]["zw"],
     "ascript" => 'keystroke "zw"',
   },
   {
@@ -1684,6 +1926,7 @@ vim_cheatsheet = [
     "catcode"=> "spell",
     "category"=> data["spell"]["title"],
     "desc" => data["spell"]["commands"]["zu"],
+    "search" => en_data["spell"]["commands"]["zu"],
     "ascript" => 'keystroke "zu"',
   },
   # misc
@@ -1692,6 +1935,7 @@ vim_cheatsheet = [
     "catcode"=> "misc",
     "category"=> data["misc"]["title"],
     "desc" => data["misc"]["commands"]["Ctrla"],
+    "search" => en_data["misc"]["commands"]["Ctrla"],
     "ascript" => 'keystroke "a" using control down',
   },
   {
@@ -1699,6 +1943,7 @@ vim_cheatsheet = [
     "catcode"=> "misc",
     "category"=> data["misc"]["title"],
     "desc" => data["misc"]["commands"]["Ctrlx"],
+    "search" => en_data["misc"]["commands"]["Ctrlx"],
     "ascript" => 'keystroke "x" using control down',
   },
   {
@@ -1706,6 +1951,7 @@ vim_cheatsheet = [
     "catcode"=> "misc",
     "category"=> data["misc"]["title"],
     "desc" => data["misc"]["commands"]["gv"],
+    "search" => en_data["misc"]["commands"]["gv"],
     "ascript" => 'keystroke "gv"'
   },
 
@@ -1720,7 +1966,8 @@ vim_cheatsheet.each do |v|
     "icon": {
       "type": "file",
       "path": File.join(dcurrent, "img", "#{v['catcode']}.png")
-    }
+    },
+    "match": v['search']
   }
   item["uid"] = v['catcode'] + "-" + v['category'] unless fixed_order
   items << item
