@@ -424,7 +424,7 @@ vim_cheatsheet = [
     "search" => en_data["cursorMovement"]["commands"]["CtrlPlusd"],
     "ascript" => 'keystroke "d" using control down',
   },
-  # 'insertMode.title'
+  # insertMode
   {
     "key"  => "i",
     "catcode"=> "insertMode",
@@ -569,7 +569,7 @@ vim_cheatsheet = [
     "search" => en_data["insertMode"]["commands"]["Esc"],
     "ascript" => 'key code 53',
   },
-  # 'editing.title'
+  # editing
   {
     "key"  => "r",
     "catcode"=> "editing",
@@ -722,7 +722,7 @@ vim_cheatsheet = [
     "search" => en_data["editing"]["commands"]["dot"],
     "ascript" => 'keystroke "."',
   },
-  # 'markingText.title'
+  # markingText
   {
     "key"  => "v",
     "catcode"=> "markingText",
@@ -827,7 +827,7 @@ vim_cheatsheet = [
     "search" => en_data["markingText"]["commands"]["Esc"],
     "ascript" => 'key code 53',
   },
-  # 'visualCommands.title'
+  # visualCommands
   {
     "key"  => ">",
     "catcode"=> "visualCommands",
@@ -884,7 +884,7 @@ vim_cheatsheet = [
     "search" => en_data["visualCommands"]["commands"]["U"],
     "ascript" => 'keystroke "U"',
   },
-  # 'registers.title'
+  # registers
   {
     "key"  => ":reg[isters]",
     "catcode"=> "registers",
@@ -925,7 +925,7 @@ vim_cheatsheet = [
     "search" => en_data["registers"]["commands"]["quotePlusp"],
     "ascript" => 'keystroke "+p"',
   },
-  # 'marks.title'
+  # marks
   {
     "key"  => "ma",
     "catcode"=> "marks",
@@ -1046,7 +1046,7 @@ vim_cheatsheet = [
     "search" => en_data["marks"]["commands"]["gf"],
     "ascript" => 'keystroke "gf"',
   },
-  # 'macros.title'
+  # macros
   {
     "key"  => "qa",
     "catcode"=> "macros",
@@ -1080,7 +1080,7 @@ vim_cheatsheet = [
     "ascript" => 'keystroke "@@"',
   },
 
-  # 'cutAndPaste.title'
+  # cutAndPaste
   {
     "key"  => "yy",
     "catcode"=> "cutAndPaste",
@@ -1217,7 +1217,7 @@ vim_cheatsheet = [
     "search" => en_data["cutAndPaste"]["commands"]["x"],
     "ascript" => 'keystroke "x"',
   },
-  # 'indentText.title'
+  # indentText
   {
     "key"  => ">>",
     "catcode"=> "indentText",
@@ -1298,7 +1298,7 @@ vim_cheatsheet = [
     "search" => en_data["indentText"]["commands"]["closeSquarep"],
     "ascript" => 'keystroke "]p"',
   },
-  # 'exiting.title'
+  # exiting
   {
     "key"  => ":w",
     "catcode"=> "exiting",
@@ -1347,7 +1347,7 @@ vim_cheatsheet = [
     "search" => en_data["exiting"]["commands"]["colonwqa"],
     "ascript" => 'keystroke ":wqa" & return',
   },
-  #'searchAndReplace.title'
+  #searchAndReplace
   {
     "key"  => "/pattern",
     "catcode"=> "searchAndReplace",
@@ -1428,7 +1428,7 @@ vim_cheatsheet = [
     "search" => en_data["searchAndReplace"]["commands"]["hash"],
     "ascript" => 'keystroke "#"',
   },
-  # 'searchMultipleFiles.title'
+  # searchMultipleFiles
   {
     "key"  => ":vim[grep] /pattern/ file",
     "catcode"=> "searchMultipleFiles",
@@ -1469,7 +1469,7 @@ vim_cheatsheet = [
     "search" => en_data["searchMultipleFiles"]["commands"]["coloncclose"],
     "ascript" => 'keystroke ":ccl" & return',
   },
-  #'tabs.title'
+  # tabs
   {
     "key"  => ":tabnew or :tabnew file",
     "catcode"=> "tabs",
@@ -1542,7 +1542,7 @@ vim_cheatsheet = [
     "search" => en_data["tabs"]["commands"]["colontabdo"],
     "ascript" => 'keystroke ":tabdo"//key code 49//keystroke "command"',
   },
-  # 'workingWithMultipleFiles.title'
+  # workingWithMultipleFiles
   {
     "key"  => ":e[dit] file",
     "catcode"=> "workingWithMultipleFiles",
@@ -1743,7 +1743,7 @@ vim_cheatsheet = [
     "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswK"],
     "ascript" => 'keystroke "w" using control down//keystroke "K"',
   },
-  # 'diff.title'
+  # diff
   {
     "key"  => "zf",
     "catcode"=> "diff",
