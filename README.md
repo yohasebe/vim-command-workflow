@@ -20,9 +20,9 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 
 Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow down commands returned by typing-in one or more search keys.
 
-- Type `vimc` into Alfred or use a hotkey if set.
-- Enter one or more search keys to narrow down the commands returned.
-- Select a command and the Vim command will automatically be typed into the front-most app you're working on
+- Type `vimc` into Alfred or use a hotkey if set
+- Enter one or more search keys to narrow down the commands returned
+- Select a command and the Vim command will automatically be typed into the front-most app
 
 ## Available Options
 
