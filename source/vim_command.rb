@@ -424,7 +424,7 @@ vim_cheatsheet = [
     "search" => en_data["cursorMovement"]["commands"]["CtrlPlusd"],
     "ascript" => 'keystroke "d" using control down',
   },
-  # insertMode
+  # 'insertMode.title'
   {
     "key"  => "i",
     "catcode"=> "insertMode",
@@ -569,7 +569,7 @@ vim_cheatsheet = [
     "search" => en_data["insertMode"]["commands"]["Esc"],
     "ascript" => 'key code 53',
   },
-  # editing
+  # 'editing.title'
   {
     "key"  => "r",
     "catcode"=> "editing",
@@ -722,7 +722,7 @@ vim_cheatsheet = [
     "search" => en_data["editing"]["commands"]["dot"],
     "ascript" => 'keystroke "."',
   },
-  # markingText
+  # 'markingText.title'
   {
     "key"  => "v",
     "catcode"=> "markingText",
@@ -827,7 +827,7 @@ vim_cheatsheet = [
     "search" => en_data["markingText"]["commands"]["Esc"],
     "ascript" => 'key code 53',
   },
-  # visualCommands
+  # 'visualCommands.title'
   {
     "key"  => ">",
     "catcode"=> "visualCommands",
@@ -884,7 +884,7 @@ vim_cheatsheet = [
     "search" => en_data["visualCommands"]["commands"]["U"],
     "ascript" => 'keystroke "U"',
   },
-  # registers
+  # 'registers.title'
   {
     "key"  => ":reg[isters]",
     "catcode"=> "registers",
@@ -925,7 +925,7 @@ vim_cheatsheet = [
     "search" => en_data["registers"]["commands"]["quotePlusp"],
     "ascript" => 'keystroke "+p"',
   },
-  # marks
+  # 'marks.title'
   {
     "key"  => "ma",
     "catcode"=> "marks",
@@ -1046,7 +1046,7 @@ vim_cheatsheet = [
     "search" => en_data["marks"]["commands"]["gf"],
     "ascript" => 'keystroke "gf"',
   },
-  # macros
+  # 'macros.title'
   {
     "key"  => "qa",
     "catcode"=> "macros",
@@ -1080,7 +1080,7 @@ vim_cheatsheet = [
     "ascript" => 'keystroke "@@"',
   },
 
-  # cutAndPaste
+  # 'cutAndPaste.title'
   {
     "key"  => "yy",
     "catcode"=> "cutAndPaste",
@@ -1217,7 +1217,7 @@ vim_cheatsheet = [
     "search" => en_data["cutAndPaste"]["commands"]["x"],
     "ascript" => 'keystroke "x"',
   },
-  # indentText
+  # 'indentText.title'
   {
     "key"  => ">>",
     "catcode"=> "indentText",
@@ -1298,7 +1298,7 @@ vim_cheatsheet = [
     "search" => en_data["indentText"]["commands"]["closeSquarep"],
     "ascript" => 'keystroke "]p"',
   },
-  # exiting
+  # 'exiting.title'
   {
     "key"  => ":w",
     "catcode"=> "exiting",
@@ -1347,7 +1347,7 @@ vim_cheatsheet = [
     "search" => en_data["exiting"]["commands"]["colonwqa"],
     "ascript" => 'keystroke ":wqa" & return',
   },
-  #searchAndReplace
+  #'searchAndReplace.title'
   {
     "key"  => "/pattern",
     "catcode"=> "searchAndReplace",
@@ -1428,7 +1428,7 @@ vim_cheatsheet = [
     "search" => en_data["searchAndReplace"]["commands"]["hash"],
     "ascript" => 'keystroke "#"',
   },
-  # searchMultipleFiles
+  # 'searchMultipleFiles.title'
   {
     "key"  => ":vim[grep] /pattern/ file",
     "catcode"=> "searchMultipleFiles",
@@ -1469,7 +1469,7 @@ vim_cheatsheet = [
     "search" => en_data["searchMultipleFiles"]["commands"]["coloncclose"],
     "ascript" => 'keystroke ":ccl" & return',
   },
-  # tabs
+  #'tabs.title'
   {
     "key"  => ":tabnew or :tabnew file",
     "catcode"=> "tabs",
@@ -1542,7 +1542,7 @@ vim_cheatsheet = [
     "search" => en_data["tabs"]["commands"]["colontabdo"],
     "ascript" => 'keystroke ":tabdo"//key code 49//keystroke "command"',
   },
-  # workingWithMultipleFiles
+  # 'workingWithMultipleFiles.title'
   {
     "key"  => ":e[dit] file",
     "catcode"=> "workingWithMultipleFiles",
@@ -1743,7 +1743,7 @@ vim_cheatsheet = [
     "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswK"],
     "ascript" => 'keystroke "w" using control down//keystroke "K"',
   },
-  # diff
+  # 'diff.title'
   {
     "key"  => "zf",
     "catcode"=> "diff",
@@ -1954,6 +1954,13 @@ vim_cheatsheet = [
     "search" => en_data["misc"]["commands"]["gv"],
     "ascript" => 'keystroke "gv"'
   },
+  {
+    "key"  => "Ctrl+r =",
+    "catcode"=> "misc",
+    "category"=> data["misc"]["title"],
+    "desc" => data["misc"]["commands"]["CtrlrEqual"],
+    "search" => en_data["misc"]["commands"]["CtrlrEqual"],
+  },
 
 ]
 
@@ -1975,3 +1982,4 @@ end
 
 result = {"items" => items}.to_json
 print result
+
