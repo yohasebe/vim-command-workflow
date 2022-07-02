@@ -1,8 +1,8 @@
 # Vim Command Alfred Workflow
 
-**An Alfred workflow to search Vim command cheat sheet + run commands**
+**An Alfred workflow to search Vim command cheat sheet + *run* commands**
 
-This is an Alfred workflow that searches a Vim command cheat sheet and sends vim commands directly to the frontmost application running Vim, Neovim, etc.
+This is an Alfred workflow that searches a Vim command cheat sheet and sends vim commands directly to the front-most application running Vim, Neovim, etc.
 
 It uses the data from the awesome multi-lingual Vim cheat sheet project [https://github.com/rtorr/vim-cheat-sheet](https://github.com/rtorr/vim-cheat-sheet).
 
@@ -21,7 +21,8 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow down commands returned by typing-in one or more search keys.
 
 - Type `vimc` into Alfred or use a hotkey if set.
-- You can enter one or more search keys to narrow down the commands returned.
+- Enter one or more search keys to narrow down the commands returned.
+- Select a command and the Vim command will automatically be typed into the front-most app you're working on
 
 ## Available Options
 
