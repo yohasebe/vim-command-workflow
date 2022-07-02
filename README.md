@@ -29,6 +29,8 @@ Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow d
 
 The command description can be displayed in one of the following languages, depending on the setting of the variable `locale` (default value: `en_us`).
 
+**N.B.** Currently, searches are always performed against the cheat sheet in *English*, regardless of `locale` setting.
+
 | Locale               | Code   |
 | ---------            | ------ |
 | العربية             | `ar`     |
@@ -63,7 +65,7 @@ The command description can be displayed in one of the following languages, depe
 | 简体中文             | `zh_cn`  |
 | 中文 (台灣)          | `zh_tw`  |
 
-### Separator Text
+### Separator
 
 You can set `separator` to any string you like, including emojis 😀.
 
