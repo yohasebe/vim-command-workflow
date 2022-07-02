@@ -1,0 +1,348 @@
+{
+  "title": "日本語",
+  "lang": "ja",
+  "lang_tag": "ja",
+  "cursorMovement": {
+    "title": "カーソル移動",
+    "commands": {
+      "h": "左に移動",
+      "j": "下に移動",
+      "k": "上に移動",
+      "l": "右に移動",
+      "gj": "move cursor down (multi-line text)",
+      "gk": "move cursor up (multi-line text)",
+      "w": "次の単語の先頭に移動",
+      "W": "次の（区切り文字を含む）単語の先頭に移動",
+      "e": "次の単語の末尾に移動",
+      "E": "次の（区切り文字を含む）単語の末尾に移動",
+      "b": "前の単語の先頭に移動",
+      "B": "前の（区切り文字を含む）単語の先頭に移動",
+      "ge": "前の単語の末尾に移動",
+      "gE": "前の（区切り文字を含む）単語の末尾に移動",
+      "H": "画面上部に移動",
+      "M": "画面中央に移動",
+      "L": "画面下部に移動",
+      "zero": "行頭に移動",
+      "caret": "その行で最初の非空白文字に移動",
+      "dollar": "行末に移動",
+      "g_": "その行で最後の非空白文字に移動",
+      "gg": "ドキュメントの先頭行に移動",
+      "G": "ドキュメントの末尾行に移動",
+      "fiveG": "5行目に移動",
+      "gd": "move to local declaration",
+      "gD": "move to global declaration",
+      "fx": "次にある文字「x」の手前に移動",
+      "tx": "次にある文字「x」の 1 つ手前に移動",
+      "Fx": "前にある文字「x」の手前に移動",
+      "Tx": "前にある文字「x」の 1 つ後ろに移動",
+      "semicolon": "直前の f, t, F, T を繰り返し",
+      "comma": "直前の f, t, F, T を反対にして繰り返し",
+      "closeCurlyBrace": "次の段落に移動（コード編集中の場合は関数/ブロック）",
+      "openCurlyBrace": "前の段落に移動（コード編集中の場合は関数/ブロック）",
+      "centerCursor": "カーソル位置を画面中央に",
+      "CtrlPluse": "画面を下に 1 行スクロール（カーソル移動なし）",
+      "CtrlPlusy": "画面を上に 1 行スクロール（カーソル移動なし）",
+      "CtrlPlusb": "画面全体分だけ上に移動",
+      "CtrlPlusf": "画面全体分だけ下に移動",
+      "CtrlPlusu": "画面半分だけ上に移動",
+      "CtrlPlusd": "画面半分だけ下に移動",
+      "percent": "対応するカッコに移動（標準でサポートしている組み合わせは: '()', '{}', '[]' - 詳細は <code>:h matchpairs</code> を参照）"
+    },
+    "tip": "これらのコマンドの前に番号を付けるとその回数分繰り返します。例えば、<kbd>4j</kbd> は 4 行下に移動します。"
+  },
+  "insertMode": {
+    "title": "挿入モード - テキストを挿入/追加",
+    "commands": {
+      "i": "カーソル位置で挿入モード",
+      "I": "その行頭で挿入モード",
+      "a": "カーソルの次の位置で挿入モード",
+      "A": "その行末で挿入モード",
+      "o": "下に改行してそこで挿入モード",
+      "O": "上に改行してそこで挿入モード",
+      "ea": "その単語の末尾で挿入モード",
+      "ctrlPlush": "挿入モード中に手前の文字を消去",
+      "ctrlPlusw": "挿入モード中に手前の単語を消去",
+      "ctrlPlusj": "挿入モード中に改行",
+      "ctrlPlust": "挿入モード中にその行を（右に）字下げ",
+      "ctrlPlusd": "挿入モード中にその行を（左に）字上げ",
+      "ctrlPlusn": "挿入モード中にカーソルの手前側へ次の候補を挿入（自動補完）",
+      "ctrlPlusp": "挿入モード中にカーソルの後ろ側へ前の候補を挿入（自動補完）",
+      "ctrlPlusrx": "insert the contents of register x",
+      "ctrlPlusox": "Temporarily enter normal mode to issue one normal-mode command x.",
+      "Esc": "挿入モードを終了"
+    }
+  },
+  "editing": {
+    "title": "編集",
+    "commands": {
+      "r": "文字を 1 つだけ置き換え",
+      "R": "replace more than one character, until <kbd>ESC</kbd> is pressed.",
+      "J": "スペースを 1 つ加えて下の行を現在の行に連結",
+      "gJ": "スペースなしで現在の行に下の行を連結",
+      "gwip": "段落をすべて連結",
+      "gTilde": "モーション範囲の大文字小文字を切り替え",
+      "gu": "モーション範囲を小文字に",
+      "gU": "モーション範囲を大文字に",
+      "cc": "現在の行を消去して挿入モード",
+      "cDollar": "カーソル位置から行末までを消去して挿入モード",
+      "ciw": "単語を全て消去して挿入モード",
+      "cw": "単語をカーソル位置から末尾まで消去して挿入モード",
+      "s": "カーソル位置の文字を消去して挿入モード",
+      "S": "現在の行を消去して挿入モード（<kbd>cc</kbd>と同じ）",
+      "xp": "二文字の入れ替え（カットしてペースト）",
+      "u": "取り消し（アンドゥ）",
+      "U": "最後に変更した行を取り消し（アンドゥ）",
+      "CtrlPlusr": "やり直し（リドゥ）",
+      "dot": "最後に使ったコマンドを繰り返し"
+    }
+  },
+  "markingText": {
+    "title": "テキスト選択（ビジュアルモード）",
+    "commands": {
+      "v": "ビジュアルモード開始。これで選択してからコマンド（Y - ヤンクなど）を実行",
+      "V": "行単位のビジュアルモード",
+      "o": "選択範囲の反対側に移動",
+      "CtrlPlusv": "矩形ビジュアル",
+      "O": "矩形の反対側の角に移動",
+      "aw": "単語を選択",
+      "ab": "() のブロックを選択",
+      "aB": "{} のブロックを選択",
+      "at": "<> タグのブロックを選択",
+      "ib": "() ブロックの括弧を除いた内側を選択",
+      "iB": "{} ブロックの括弧を除いた内側を選択",
+      "it": "<> タグのブロックの括弧を除いた内側を選択",
+      "Esc": "ビジュアルモード終了",
+      "AB": "untranslatable"
+    },
+    "tip1": "<kbd>b</kbd> や <kbd>B</kbd> の代わりにそれぞれ <kbd>(</kbd> や <kbd>{</kbd> も使えます。"
+  },
+  "visualCommands": {
+    "title": "ビジュアルモードでのコマンド",
+    "commands": {
+      "greaterThan": "選択範囲を右に",
+      "lessThan": "選択範囲を左に",
+      "y": "選択範囲をヤンク（コピー）",
+      "d": "選択範囲を消去",
+      "tilde": "大文字と小文字を入れ替え",
+      "u": "選択範囲を小文字に",
+      "U": "選択範囲を大文字に"
+    }
+  },
+  "registers": {
+    "title": "レジスタ",
+    "commands": {
+      "show": "レジスタの内容を表示",
+      "pasteRegisterX": "レジスタ x からペースト",
+      "yankIntoRegisterX": "レジスタ x へヤンク",
+      "quotePlusy": "システムクリップボードレジスタへヤンク",
+      "quotePlusp": "システムクリップボードレジスタからペースト"
+    },
+    "tip1": "レジスタは ~/.viminfo に保存され、次の再起動時に読み込まれます。",
+    "tip2": {
+      "0": "最後のヤンク",
+      "title": "特殊レジスタ:",
+      "quote": "無名レジスタ, 最後の削除またはヤンク",
+      "percent": "現在のファイル名",
+      "hashtag": "別のファイル名",
+      "asterisk": "クリップボードの内容（X11 プライマリ）",
+      "plus": "クリップボードの内容 （X11 クリップボード）",
+      "slash": "最後の検索のパターン",
+      "colon": "最後のコマンドライン",
+      "dot": "最後に挿入したテキスト",
+      "minus": "最後の小さな（一行未満の）消去",
+      "equal": "数式レジスタ",
+      "underscore": "空白の消去用レジスタ"
+    }
+  },
+  "marks": {
+    "title": "マークと位置",
+    "commands": {
+      "list": "マークリスト",
+      "currentPositionA": "現在の位置をマーク「a」に設定",
+      "jumpPositionA": "マーク「a」に移動",
+      "yankToMarkA": "マーク「a」の位置をヤンク",
+      "backtick0": "Vim が以前終了したときの位置に移動",
+      "backtickQuote": "このファイルを最後に編集した位置に移動",
+      "backtickDot": "このファイルの最後の変更に移動",
+      "backtickBacktick": "最後にジャンプした位置の手前に移動",
+      "colonjumps": "ジャンプのリスト",
+      "ctrlPlusi": "ジャンプリスト内の新しい方の位置に移動",
+      "ctrlPluso": "ジャンプリスト内の古い方の位置に移動",
+      "colonchanges": "変更リスト",
+      "gcomma": "変更リスト内の新しい方の位置に移動",
+      "gsemicolon": "変更リスト内の古い方の位置に移動",
+      "ctrlPlusCloseSquare": "カーソル下の単語のタグへ移動"
+    },
+    "tip1": "マークへ移動するにはバックティック消去（<kbd>`</kbd>）とアポストロフィ（<kbd>'</kbd>）が使用できます。アポストロフィを使ったジャンプではマークがある行頭（の最初の非空白文字）に移動します。",
+    "tip": ""
+  },
+  "macros": {
+    "title": "マクロ",
+    "commands": {
+      "recordA": "マクロ「a」を記録開始",
+      "stopRecording": "マクロの記録を停止",
+      "runA": "マクロ「a」を実行",
+      "rerun": "最後に実行したマクロを再実行"
+    }
+  },
+  "global": {
+    "title": "全般",
+    "commands": {
+      "helpForKeyword": "「keyword」のヘルプを開く",
+      "saveAsFile": "名前を付けて保存",
+      "closePane": "現在のペインを閉じる",
+      "K": "カーソル下の単語の man ページを開く",
+      "colonTerminal": "ターミナルウインドウを開く"
+    },
+    "tip1": "ターミナルで <kbd>vimtutor</kbd> を実行して最初に Vim コマンドを学びましょう。"
+  },
+  "cutAndPaste": {
+    "title": "カットとペースト",
+    "commands": {
+      "yy": "行をヤンク（コピー）",
+      "twoyy": "2 行をヤンク（コピー）",
+      "yw": "次の単語の始まりまでをヤンク（コピー）",
+      "yiw": "その単語全体をヤンク（コピー）",
+      "yaw": "その単語全体と前後のスペースをヤンク（コピー）",
+      "yDollar": "行末までヤンク",
+      "p": "カーソル位置の 1 つ後ろにペースト",
+      "P": "カーソル位置の手前にペースト",
+      "gp": "put (paste) the clipboard after cursor and leave cursor after the new text",
+      "gP": "put (paste) before cursor and leave cursor after the new text",
+      "dd": "行を消去（カット）",
+      "twodd": "2 行を消去（カット）",
+      "dw": "次の単語の始まりまでを消去（カット）",
+      "diw": "その単語全体を消去（カット）",
+      "daw": "その単語全体と前後のスペースを消去（カット）",
+      "dDollar": "行末まで消去（カット）（<kbd>D</kbd>と同じ）",
+      "x": "文字を 1 つ消去（カット）"
+    }
+  },
+  "indentText": {
+    "title": "テキストインデント",
+    "commands": {
+      "greaterThanGreaterThan": "その行を（右に）字下げ",
+      "lessThanLessThan": "その行を（左に）字上げ",
+      "greaterThanPercent": "() や {} のブロックを字下げ（カーソルが括弧にあるとき)",
+      "greaterThanib": "() のブロックの内側を字下げ",
+      "greaterThanat": "<> タグのブロックを字下げ",
+      "3==": "3 行を再インデント",
+      "=Percent": "() や {} のブロックを再字下げ（カーソルが括弧にあるとき)",
+      "=iB": "{} のブロックの内側を再字下げ",
+      "gg=G": "バッファ全体を再字下げ",
+      "closeSquarep": "ペーストして現在の行にインデントを揃える"
+    }
+  },
+  "exiting": {
+    "title": "終了",
+    "commands": {
+      "colonw": "終了せずにファイルに書き込み（保存）",
+      "colonwsudo": "sudo を使って現在のファイルに書き込み",
+      "colonwq": "書き込み（保存）して終了",
+      "colonx": "書き込み（保存）して終了",
+      "colonq": "終了（未保存の変更があると失敗する）",
+      "colonqbang": "未保存の変更を破棄して終了",
+      "colonwqa": "全てのタブを書き込み（保存）して終了"
+    }
+  },
+  "searchAndReplace": {
+    "title": "検索と置換",
+    "commands": {
+      "forwardSlashPattern": "pattern のパターンを検索",
+      "questionMarkPattern": "?pattern のパターンを逆方向に検索",
+      "backslashVpattern": "'very magic' パターン: 非英数字を特別な正規表現文字として扱う（エスケープ不要）",
+      "n": "順方向に再検索",
+      "N": "逆方向に再検索",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashg": "すべての old を new に置換",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashgc": "すべての old を new に確認しながら置換",
+      "colonnoh": "検索結果のハイライトを無効化"
+    }
+  },
+  "searchMultipleFiles": {
+    "title": "複数ファイルを検索",
+    "commands": {
+      "colonvimgrep": "複数ファイルで pattern を検索",
+      "coloncn": "次の一致箇所に移動",
+      "coloncp": "前の一致箇所に移動",
+      "coloncopen": "一致箇所一覧のウインドウを開く",
+      "coloncclose": "クイック修正ウインドウを閉じる"
+    }
+  },
+  "workingWithMultipleFiles": {
+    "title": "複数のファイルでの作業",
+    "commands": {
+      "colone": "新しいバッファでファイルを編集",
+      "colonbnext": "次のバッファに移動",
+      "colonbprev": "前のバッファに移動",
+      "colonls": "バッファのリストを開く",
+      "colonbd": "バッファを消去（ファイルを閉じる）",
+      "colonbnumber": "# 番目のバッファに移動",
+      "colonbfile": "file という名前のバッファに移動",
+      "colonsp": "新しいバッファの水平分割ウィンドウでファイルを開く",
+      "colonvsp": "新しいバッファの垂直分割ウィンドウでファイルを開く",
+      "colonvertba": "全てのバッファを垂直分割ウインドウにして編集",
+      "colontabba": "全てのバッファをタブにして編集",
+      "ctrlPlusws": "ウィンドウ分割",
+      "ctrlPluswv": "ウィンドウ垂直分割",
+      "ctrlPlusww": "ウィンドウ切り替え",
+      "ctrlPluswq": "ウィンドウ終了",
+      "ctrlPluswx": "現在のウインドウを次のウインドウと入れ替え",
+      "ctrlPlusw=": "全てのウインドウを同じ高さと幅に",
+      "ctrlPluswh": "右のウィンドウ（垂直分割）にカーソル移動",
+      "ctrlPluswl": "左のウィンドウ（垂直分割）にカーソル移動",
+      "ctrlPluswj": "下のウィンドウ（水平分割）にカーソル移動",
+      "ctrlPluswk": "上のウィンドウ（水平分割）にカーソル移動",
+      "ctrlPluswH": "make current window full height at far left (leftmost vertical window)",
+      "ctrlPluswL": "make current window full height at far right (rightmost vertical window)",
+      "ctrlPluswJ": "make current window full width at the very bottom (bottommost horizontal window)",
+      "ctrlPluswK": "make current window full width at the very top (topmost horizontal window)"
+    }
+  },
+  "tabs": {
+    "title": "タブ",
+    "commands": {
+      "colonTabNew": "ファイルを新しいタブで開く",
+      "ctrlPluswT": "分割ウィンドウをそのタブに移動",
+      "gt": "次のタブに移動",
+      "gT": "前のタブに移動",
+      "hashgt": "# 番目のタブに移動",
+      "colontabmove": "現在のタブを # 番目に移動（0 始まり）",
+      "colontabc": "現在のタブを閉じる",
+      "colontabo": "現在以外のタブを閉じる",
+      "colontabdo": "全てのタブで <code>command</code> を実行（例: <code>:tabdo q</code> - は全てのタブを閉じる）"
+    }
+  },
+  "diff": {
+    "title": "差分",
+    "commands": {
+      "zf": "モーション範囲での折りたたみを手動定義",
+      "zd": "カーソル下の折りたたみを消去",
+      "za": "カーソル下の折りたたみを切り替え",
+      "zo": "カーソル下の折りたたみを開く",
+      "zc": "カーソル下の折りたたみを閉じる",
+      "zr": "全ての折りたたみを 1 段階減らす（開く）",
+      "zm": "全ての折りたたみを 1 段階折りたたむ（閉じる）",
+      "zi": "全ての折りたたみを切り替え",
+      "closeSquarec": "次の変更点の始端に移動",
+      "openSquarec": "前の変更点の始端に移動",
+      "do": "（他のバッファから）差分を取得する",
+      "dp": "（他のバッファへ）差分を送り込む",
+      "colonDiffthis": "現在のウインドウを差分モードのひとつに",
+      "colonDiffupdate": "差分情報を更新",
+      "colonDiffoff": "現在のウインドウの差分モードを無効化"
+    },
+    "tip1": "折りたたみのコマンド（<kbd>za</kbd> など）は 1 段階だけ操作します。全段階を操作するには、大文字にします（<kbd>zA</kbd>など）。",
+    "tip2": "ファイルの差分を見るには、ターミナルで <kbd>vimdiff</kbd> を直接実行することで Vim を差分モードで起動できます。これは <kbd>git difftool</kbd> としても設定できます。"
+  },
+  "words": {
+    "keyword": "keyword",
+    "file": "file",
+    "movement": "movement"
+  },
+  "languages": {
+    "title": "言語"
+  },
+  "footer": "ソースはこちら",
+  "layout": "page",
+  "permalink": "/lang/ja/"
+}

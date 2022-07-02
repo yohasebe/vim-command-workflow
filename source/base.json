@@ -1,0 +1,35 @@
+{
+  "title": "Base",
+  "searchAndReplace": {
+    "commands": {
+      "asterisk": "Next whole word under cursor",
+      "hash": "Previous whole word under cursor"
+    }
+  },
+  "marks": {
+    "commands": {
+      "gf": "Go to file in cursor"
+    }
+  },
+  "misc": {
+    "title": "Miscellaneous",
+    "commands": {
+      "Ctrla": "Increment number",
+      "Ctrlx": "Decrement number",
+      "gv": "Re-select last selected block of text"
+    }
+  },
+  "spell": {
+    "title": "Spell checking",
+    "commands": {
+      "setSpellEnUs": "Turn on US English spell checking",
+      "setNoSpell": "Turn off spell checking",
+      "closeBrackets": "Move to next misspelled word after the cursor",
+      "openBrackets": "Move to previous misspelled word before the cursor",
+      "z=": "Suggest spellings for the word under/after the cursor",
+      "zg": "Add word to spell list",
+      "zw": "Add word to spell list",
+      "zu": "Suggest words for bad word under cursor from spell file"
+    }
+  }
+}

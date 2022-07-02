@@ -1,0 +1,347 @@
+{
+  "title": "Українська",
+  "lang": "uk",
+  "lang_tag": "uk",
+  "cursorMovement": {
+    "title": "Переміщення курсору",
+    "commands": {
+      "h": "перемістити курсор ліворуч",
+      "j": "перемістити курсор вниз",
+      "k": "перемістити курсор вгору",
+      "l": "перемістити курсор праворуч",
+      "gj": "move cursor down (multi-line text)",
+      "gk": "move cursor up (multi-line text)",
+      "w": "переміститись вперед на початок слова",
+      "W": "переміститись вперед на початок слова (слово може містити пунктуацію)",
+      "e": "переміститись вперед на кінець слова",
+      "E": "переміститись вперед на кінець слова (слово може містити пунктуацію)",
+      "b": "переміститись назад на початок слова",
+      "B": "переміститись назад на початок слова (слово може містити пунктуацію)",
+      "ge": "jump backwards to the end of a word",
+      "gE": "jump backwards to the end of a word (words can contain punctuation)",
+      "H": "переміститись на початок екрану",
+      "M": "переміститись на середину екрану",
+      "L": "переміститись на кінець екрану",
+      "zero": "переміститись на початок рядка",
+      "caret": "переміститись на перший непробільний символ рядка",
+      "dollar": "переміститись в кінець рядка",
+      "g_": "переміститись на останній не пробільний символ рядка",
+      "gg": "переміститись на перший рядок документа",
+      "G": "переміститись на останній рядок документа",
+      "fiveG": "перемістити на п'ятий рядок",
+      "gd": "move to local declaration",
+      "gD": "move to global declaration",
+      "fx": "перемістись на наступний символ x",
+      "tx": "перемітистись до наступного символа x",
+      "Fx": "переміститись на попередній символ x",
+      "Tx": "переміститись на наступний символ, що за поперднім символом х",
+      "semicolon": "повторити попердні f, t, F чи T переміщення",
+      "comma": "поавторити попередні f, t, F чи T переміщення, в зворотньому порядку",
+      "closeCurlyBrace": "переміститись до наступного параграфа (чи функції/блоку, коли редагується код)",
+      "openCurlyBrace": "переміститись до попереднього параграфа (чи функції/блоку, коли редагується код)",
+      "centerCursor": "центрувати курсор на екрані",
+      "CtrlPluse": "підняти видимий вміст екрану на один рядок (без переміщення курсора)",
+      "CtrlPlusy": "опустити видивий вміст екрану на один рядок (без переміщення курсора)",
+      "CtrlPlusb": "переміститись назад на один екрана",
+      "CtrlPlusf": "переміститись на один екран вперед",
+      "CtrlPlusu": "переміститись надаз на пів екрана",
+      "CtrlPlusd": "переміститись вперед на пів екрана",
+      "percent": "переміститись до відповідного символа (відповідні пари: '()', '{}', '[]' - використовуйте <code>:h відповідна_пара</code> для детальнішої інформації)"
+    },
+    "tip": "Добавте число перед командою переміщения курсору для того, щоб повторити її. Наприклад, <kbd>4j</kbd> переміщує курсор на 4 рядка вниз."
+  },
+  "insertMode": {
+    "title": "Режим вставки - вставка/додавання тексту",
+    "commands": {
+      "i": "вставка перед курсором",
+      "I": "вставка на початку рядка",
+      "a": "вставка (додавання) після курсору",
+      "A": "вставка (додавання) у кінець рядка",
+      "o": "додавання нового рядка під поточним",
+      "O": "додавання нового рядка над поточним",
+      "ea": "вставка (додавання) в кінці слова",
+      "ctrlPlush": "видалення символа перед курсором в режимі введення тексту",
+      "ctrlPlusw": "видалення слова перед курсором в режимі введення тексту",
+      "ctrlPlusj": "перехід на новий рядок в режимі введення тексту",
+      "ctrlPlust": "indent (move right) line one shiftwidth during insert mode",
+      "ctrlPlusd": "de-indent (move left) line one shiftwidth during insert mode",
+      "ctrlPlusn": "insert (auto-complete) next match before the cursor during insert mode",
+      "ctrlPlusp": "insert (auto-complete) previous match before the cursor during insert mode",
+      "ctrlPlusrx": "insert the contents of register x",
+      "ctrlPlusox": "Temporarily enter normal mode to issue one normal-mode command x.",
+      "Esc": "вихід з режиму вставки"
+    }
+  },
+  "editing": {
+    "title": "Редагування",
+    "commands": {
+      "r": "замінити один символ",
+      "R": "replace more than one character, until <kbd>ESC</kbd> is pressed.",
+      "J": "приєднати нижню строчку до поточної",
+      "gJ": "join line below to the current one without space in between",
+      "gwip": "reflow paragraph",
+      "gTilde": "switch case up to motion",
+      "gu": "change to lowercase up to motion",
+      "gU": "change to uppercase up to motion",
+      "cc": "замінити усю строчку",
+      "cDollar": "замінити до кінця строчки",
+      "ciw": "change (replace) entire word",
+      "cw": "замінити до кінця слова",
+      "s": "видалити символ та замінити текст",
+      "S": "видалити строчку та замінити текст (те ж що й cc)",
+      "xp": "переставити дві букви (видалити й вставити)",
+      "u": "скасувати",
+      "U": "restore (undo) last changed line",
+      "CtrlPlusr": "повторити",
+      "dot": "повторити останню команду"
+    }
+  },
+  "markingText": {
+    "title": "Виділення тексту (візуальний режим)",
+    "commands": {
+      "v": "увімкнути режим виділення тексту, виділити строчки, потім виконати команду (наприклад, y-копіювання)",
+      "V": "увімкнути построчний режим виділення",
+      "o": "переміститись на інший кінець виділеної частини",
+      "CtrlPlusv": "увімкнути режим виділення блоків",
+      "O": "перемістити на інший кут блоку",
+      "aw": "виділити слово",
+      "ab": "блок у ()",
+      "aB": "блок у {}",
+      "at": "a block with <> tags",
+      "ib": "внутрішній блок у ()",
+      "iB": "внутрішній блок у {}",
+      "it": "inner block with <> tags",
+      "Esc": "вийти з режиму виділення тексту"
+    },
+    "tip1": "Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively."
+  },
+  "visualCommands": {
+    "title": "Візуальні команди",
+    "commands": {
+      "greaterThan": "змістити текст праворуч",
+      "lessThan": "змістити текст ліворуч",
+      "y": "скопіювати виділений текст",
+      "d": "видалити виділений текст",
+      "tilde": "переключити регістр",
+      "u": "change marked text to lowercase",
+      "U": "change marked text to uppercase"
+    }
+  },
+  "registers": {
+    "title": "Registers",
+    "commands": {
+      "show": "show registers content",
+      "pasteRegisterX": "paste contents of register x",
+      "yankIntoRegisterX": "yank into register x",
+      "quotePlusy": "yank into the system clipboard register",
+      "quotePlusp": "paste from the system clipboard register"
+    },
+    "tip1": "Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.",
+    "tip2": {
+      "0": "last yank",
+      "title": "Special registers:",
+      "quote": "unnamed register, last delete or yank",
+      "percent": "current file name",
+      "hashtag": "alternate file name",
+      "asterisk": "clipboard contents (X11 primary)",
+      "plus": "clipboard contents (X11 clipboard)",
+      "slash": "last search pattern",
+      "colon": "last command-line",
+      "dot": "last inserted text",
+      "minus": "last small (less than a line) delete",
+      "equal": "expression register",
+      "underscore": "black hole register"
+    }
+  },
+  "marks": {
+    "title": "Marks",
+    "commands": {
+      "list": "list of marks",
+      "currentPositionA": "set current position for mark A",
+      "jumpPositionA": "jump to position of mark A",
+      "yankToMarkA": "yank text to position of mark A",
+      "backtick0": "go to the position where Vim was previously exited",
+      "backtickQuote": "go to the position when last editing this file",
+      "backtickDot": "go to the position of the last change in this file",
+      "backtickBacktick": "go to the position before the last jump",
+      "colonjumps": "list of jumps",
+      "ctrlPlusi": "go to newer position in jump list",
+      "ctrlPluso": "go to older position in jump list",
+      "colonchanges": "list of changes",
+      "gcomma": "go to newer position in change list",
+      "gsemicolon": "go to older position in change list",
+      "ctrlPlusCloseSquare": "jump to the tag under cursor"
+    },
+    "tip1": "To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.",
+    "tip": ""
+  },
+  "macros": {
+    "title": "Macros",
+    "commands": {
+      "recordA": "record macro a",
+      "stopRecording": "stop recording macro",
+      "runA": "run macro a",
+      "rerun": "rerun last run macro"
+    }
+  },
+  "global": {
+    "title": "Global",
+    "commands": {
+      "helpForKeyword": "open help for keyword",
+      "saveAsFile": "save file as",
+      "closePane": "close current pane",
+      "K": "open man page for word under the cursor",
+      "colonTerminal": "open a terminal window"
+    },
+    "tip1": "Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands."
+  },
+  "cutAndPaste": {
+    "title": "Вирізати й вставити",
+    "commands": {
+      "yy": "скопіювати строчку",
+      "twoyy": "скопіювати 2 строчки",
+      "yw": "скопіювати слово",
+      "yiw": "yank (copy) word under the cursor",
+      "yaw": "yank (copy) word under the cursor and the space after or before it",
+      "yDollar": "скопіювати до кінця строчки",
+      "p": "вставити вміст буфера обміну після курсору",
+      "P": "вставити вміст буфера обміну перед курсором",
+      "gp": "put (paste) the clipboard after cursor and leave cursor after the new text",
+      "gP": "put (paste) before cursor and leave cursor after the new text",
+      "dd": "видалити (вирізати) строчку",
+      "twodd": "видалити (вирізати) 2 строчки",
+      "dw": "видалити (вирізати) слово",
+      "diw": "delete (cut) word under the cursor",
+      "daw": "delete (cut) word under the cursor and the space after or before it",
+      "dDollar": "видалити (вирізати) до кінця строчки",
+      "x": "видалити (вирізати) символ"
+    }
+  },
+  "indentText": {
+    "title": "Indent text",
+    "commands": {
+      "greaterThanGreaterThan": "indent (move right) line one shiftwidth",
+      "lessThanLessThan": "de-indent (move left) line one shiftwidth",
+      "greaterThanPercent": "indent a block with () or {} (cursor on brace)",
+      "greaterThanib": "indent inner block with ()",
+      "greaterThanat": "indent a block with <> tags",
+      "3==": "re-indent 3 lines",
+      "=Percent": "re-indent a block with () or {} (cursor on brace)",
+      "=iB": "re-indent inner block with {}",
+      "gg=G": "re-indent entire buffer",
+      "closeSquarep": "paste and adjust indent to current line"
+    }
+  },
+  "exiting": {
+    "title": "Вийти й зберегти",
+    "commands": {
+      "colonw": "зберегти файл, але не виходити",
+      "colonwsudo": "write out the current file using sudo",
+      "colonwq": "зберегти файл та вийти",
+      "colonx": "зберегти та вийти",
+      "colonq": "вийти (не працює у випадку якщо зміни не збережено)",
+      "colonqbang": "вийти та втратити зміни що незбережено",
+      "colonwqa": "write (save) and quit on all tabs"
+    }
+  },
+  "searchAndReplace": {
+    "title": "Пошук та заміна",
+    "commands": {
+      "forwardSlashPattern": "пошук шаблону",
+      "questionMarkPattern": "зворотній пошук шаблону",
+      "backslashVpattern": "'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)",
+      "n": "повторити пошук у тому ж напрямку",
+      "N": "повторити пошук у зворотньому напрямку",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashg": "замінити усі входження шаблону у файл на вказане значення",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashgc": "замінити усі входження шаблону у файл на вказане значення з підтвердженням",
+      "colonnoh": "remove highlighting of search matches"
+    }
+  },
+  "searchMultipleFiles": {
+    "title": "Search in multiple files",
+    "commands": {
+      "colonvimgrep": "search for pattern in multiple files",
+      "coloncn": "jump to the next match",
+      "coloncp": "jump to the previous match",
+      "coloncopen": "open a window containing the list of matches",
+      "coloncclose": "close the quickfix window"
+    }
+  },
+  "workingWithMultipleFiles": {
+    "title": "Робота з декількома файлами",
+    "commands": {
+      "colone": "редагувати файл у новому буфері",
+      "colonbnext": "перейти до наступного буфера",
+      "colonbprev": "перейти до попереднього буфера",
+      "colonls": "list all open buffers",
+      "colonbd": "видалити буфер (закрити файл)",
+      "colonbnumber": "go to a buffer by #",
+      "colonbfile": "go to a buffer by file",
+      "colonsp": "відкрити файл у новому буфері й розділити вікно",
+      "colonvsp": "відкрити файл у новому буфері й вертикально розділити вікно",
+      "colonvertba": "edit all buffers as vertical windows",
+      "colontabba": "edit all buffers as tabs",
+      "ctrlPlusws": "розділити вікно",
+      "ctrlPluswv": "розділити вікно вертикально",
+      "ctrlPlusww": "переключення вікон",
+      "ctrlPluswq": "закрити вікно",
+      "ctrlPluswx": "exchange current window with next one",
+      "ctrlPlusw=": "make all windows equal height & width",
+      "ctrlPluswh": "переместити курсор у ліве вікно (вертикальний розподіл)",
+      "ctrlPluswl": "переместити курсор у праве вікно (вертикальний розподіл)",
+      "ctrlPluswj": "переместити курсор у вікно нижче (горизонтальний розподіл)",
+      "ctrlPluswk": "переместити курсор у вікно вище (горизонтальний розподіл)",
+      "ctrlPluswH": "make current window full height at far left (leftmost vertical window)",
+      "ctrlPluswL": "make current window full height at far right (rightmost vertical window)",
+      "ctrlPluswJ": "make current window full width at the very bottom (bottommost horizontal window)",
+      "ctrlPluswK": "make current window full width at the very top (topmost horizontal window)"
+    }
+  },
+  "tabs": {
+    "title": "Вкладинки",
+    "commands": {
+      "colonTabNew": "відкрити файл у новій вкладинці",
+      "ctrlPluswT": "перемістити поточне вікно у власну вкладинку",
+      "gt": "переключитись на наступну вкладинку",
+      "gT": "переключитись на попередню вкладинку",
+      "hashgt": "переключити на вкладинку з номером #",
+      "colontabmove": "перемістити поточну вкладинку на # позицію (нумерація з 0)",
+      "colontabc": "закрити поточну вкладинку з усіма її вікнами",
+      "colontabo": "закрити усі вкладинки окрім поточної",
+      "colontabdo": "run the <code>command</code> on all tabs (e.g. <code>:tabdo q</code> - closes all opened tabs)"
+    }
+  },
+  "diff": {
+    "title": "Diff",
+    "commands": {
+      "zf": "manually define a fold up to motion",
+      "zd": "delete fold under the cursor",
+      "za": "toggle fold under the cursor",
+      "zo": "open fold under the cursor",
+      "zc": "close fold under the cursor",
+      "zr": "reduce (open) all folds by one level",
+      "zm": "fold more (close) all folds by one level",
+      "zi": "toggle folding functionality",
+      "closeSquarec": "jump to start of next change",
+      "openSquarec": "jump to start of previous change",
+      "do": "obtain (get) difference (from other buffer)",
+      "dp": "put difference (to other buffer)",
+      "colonDiffthis": "make current window part of diff",
+      "colonDiffupdate": "update differences",
+      "colonDiffoff": "switch off diff mode for current window"
+    },
+    "tip1": "The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).",
+    "tip2": "To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>."
+  },
+  "words": {
+    "keyword": "keyword",
+    "file": "file",
+    "movement": "movement"
+  },
+  "languages": {
+    "title": "Мови"
+  },
+  "footer": "Дивіться код на ",
+  "layout": "page",
+  "permalink": "/lang/uk/"
+}

@@ -1,0 +1,348 @@
+{
+  "title": "Bahasa Indonesia",
+  "lang": "id",
+  "lang_tag": "id",
+  "cursorMovement": {
+    "title": "Pergerakan Kursor",
+    "commands": {
+      "h": "memindahkan kursor ke kiri",
+      "j": "memindahkan kursor ke bawah",
+      "k": "memindahkan kursor ke atas",
+      "l": "memindahkan kursor ke kanan",
+      "gj": "move cursor down (multi-line text)",
+      "gk": "move cursor up (multi-line text)",
+      "w": "lompat ke awal kata selanjutnya",
+      "W": "lompat ke awal kata selanjutanya (kata-kata dapat mengandung tanda baca)",
+      "e": "lompat ke akhir kata selanjutnya",
+      "E": "lompat ke akhir kata selanjutnya (kata-kata dapat mengandung tanda baca)",
+      "b": "lompat ke awal kata sebelumnya",
+      "B": "lompat ke awal kata sebelumnya (kata-kata dapat mengandung tanda baca)",
+      "ge": "jump backwards to the end of a word",
+      "gE": "jump backwards to the end of a word (words can contain punctuation)",
+      "H": "move to top of screen",
+      "M": "move to middle of screen",
+      "L": "move to bottom of screen",
+      "zero": "lompat ke awal baris saat ini",
+      "caret": "lompat ke karakter pertama baris saat ini",
+      "dollar": "lompat ke akhir baris saat ini",
+      "g_": "jump to the last non-blank character of the line",
+      "gg": "pindah ke baris teratas dokumen",
+      "G": "pindah ke baris paling akhir dokumen",
+      "fiveG": "pindah ke baris ke-5",
+      "gd": "move to local declaration",
+      "gD": "move to global declaration",
+      "fx": "lompat tepat pada karakter x",
+      "tx": "lompat tepat sebelum karakter x",
+      "Fx": "jump to previous occurence of character x",
+      "Tx": "jump to after previous occurence of character x",
+      "semicolon": "repeat previous f, t, F or T movement",
+      "comma": "repeat previous f, t, F or T movement, backwards",
+      "closeCurlyBrace": "Lompat ke paragraf berikutnya (atau blok kode, saat mengedit kode)",
+      "openCurlyBrace": "Lompat ke paragraf sebelumnya (atau blok kode, saat mengedit kode)",
+      "centerCursor": "center cursor on screen",
+      "CtrlPluse": "move screen down one line (without moving cursor)",
+      "CtrlPlusy": "move screen up one line (without moving cursor)",
+      "CtrlPlusb": "move back one full screen",
+      "CtrlPlusf": "move forward one full screen",
+      "CtrlPlusu": "move back 1/2 a screen",
+      "CtrlPlusd": "move forward 1/2 a screen",
+      "percent": "move to matching character (default supported pairs: '()', '{}', '[]' - use <code>:h matchpairs</code> in vim for more info)",
+      "tip": "Awali perintah pergerakan kursor dengan angka untuk pengulangan. Misal, <kbd>4j</kbd> bergerak ke bawah 4 baris."
+    },
+    "tip": "Prefix a cursor movement command with a number to repeat it. For example, <kbd>4j</kbd> moves down 4 lines."
+  },
+  "insertMode": {
+    "title": "Mode Insert - menyisipkan/menambahkan text",
+    "commands": {
+      "i": "menyisipkan sebelum kursor",
+      "I": "menyisipkan pada permulaan baris",
+      "a": "menyisipkan (menambahkan) setelah kursor",
+      "A": "menyisipkan (menambahkan) pada akhir baris",
+      "o": "menambahkan (membuka) baris baru dibawah baris saat ini",
+      "O": "menambahkan (membuka) baris baru diatas baris saat ini",
+      "ea": "menyisipkan (menambahkan) pada akhir kata",
+      "ctrlPlush": "delete the character before the cursor during insert mode",
+      "ctrlPlusw": "delete word before the cursor during insert mode",
+      "ctrlPlusj": "begin new line during insert mode",
+      "ctrlPlust": "indent (move right) line one shiftwidth during insert mode",
+      "ctrlPlusd": "de-indent (move left) line one shiftwidth during insert mode",
+      "ctrlPlusn": "insert (auto-complete) next match before the cursor during insert mode",
+      "ctrlPlusp": "insert (auto-complete) previous match before the cursor during insert mode",
+      "ctrlPlusrx": "insert the contents of register x",
+      "ctrlPlusox": "Temporarily enter normal mode to issue one normal-mode command x.",
+      "Esc": "berhenti dari mode insert"
+    }
+  },
+  "editing": {
+    "title": "Editing",
+    "commands": {
+      "r": "mengubah satu karakter",
+      "R": "replace more than one character, until <kbd>ESC</kbd> is pressed.",
+      "J": "menyambung baris di bawah dengan baris saat ini",
+      "gJ": "join line below to the current one without space in between",
+      "gwip": "reflow paragraph",
+      "gTilde": "switch case up to motion",
+      "gu": "change to lowercase up to motion",
+      "gU": "change to uppercase up to motion",
+      "cc": "menghapus isi baris saat ini untuk diganti dengan text lain",
+      "cDollar": "menghapus semua karakter setelah kursor hingga akhir baris",
+      "ciw": "change (replace) entire word",
+      "cw": "menghapus satu kata untuk diganti dengan kata lain",
+      "s": "menghapus karakter dan mengganti text",
+      "S": "menghapus isi baris saat ini untuk diganti dengan text lain (sama dengan cc)",
+      "xp": "menukar dua karakter (delete dan paste)",
+      "u": "undo",
+      "U": "restore (undo) last changed line",
+      "CtrlPlusr": "redo",
+      "dot": "ulangi perintah sebelumnya"
+    }
+  },
+  "markingText": {
+    "title": "Menandai Text (Visual Mode)",
+    "commands": {
+      "v": "memulai mode visual, menandai baris-baris, lalu jalankan perintah (misal y-yank)",
+      "V": "memulai mode visual secara per baris",
+      "o": "pindah ke ke bagian akhir dari area lain yang telah ditandai",
+      "CtrlPlusv": "memulai mode visual blok",
+      "O": "pindah ke sudut lain pada sebuah blok",
+      "aw": "menandai kata",
+      "ab": "a block with ()",
+      "aB": "a block with {}",
+      "at": "a block with <> tags",
+      "ib": "inner block with ()",
+      "iB": "inner block with {}",
+      "it": "inner block with <> tags",
+      "Esc": "berhenti dari mode visual"
+    },
+    "tip1": "Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively."
+  },
+  "visualCommands": {
+    "title": "Perintah - perintah visual",
+    "commands": {
+      "greaterThan": "menggeser text ke kanan",
+      "lessThan": "menggeser text ke kiri",
+      "y": "yank (menyalin) text yang ditandai",
+      "d": "menghapus text yang ditandai",
+      "tilde": "menukar huruf kapital-kapitil",
+      "u": "change marked text to lowercase",
+      "U": "change marked text to uppercase"
+    }
+  },
+  "registers": {
+    "title": "Registers",
+    "commands": {
+      "show": "show registers content",
+      "pasteRegisterX": "paste contents of register x",
+      "yankIntoRegisterX": "yank into register x",
+      "quotePlusy": "yank into the system clipboard register",
+      "quotePlusp": "paste from the system clipboard register"
+    },
+    "tip1": "Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.",
+    "tip2": {
+      "0": "last yank",
+      "title": "Special registers:",
+      "quote": "unnamed register, last delete or yank",
+      "percent": "current file name",
+      "hashtag": "alternate file name",
+      "asterisk": "clipboard contents (X11 primary)",
+      "plus": "clipboard contents (X11 clipboard)",
+      "slash": "last search pattern",
+      "colon": "last command-line",
+      "dot": "last inserted text",
+      "minus": "last small (less than a line) delete",
+      "equal": "expression register",
+      "underscore": "black hole register"
+    }
+  },
+  "marks": {
+    "title": "Marks",
+    "commands": {
+      "list": "list of marks",
+      "currentPositionA": "set current position for mark A",
+      "jumpPositionA": "jump to position of mark A",
+      "yankToMarkA": "yank text to position of mark A",
+      "backtick0": "go to the position where Vim was previously exited",
+      "backtickQuote": "go to the position when last editing this file",
+      "backtickDot": "go to the position of the last change in this file",
+      "backtickBacktick": "go to the position before the last jump",
+      "colonjumps": "list of jumps",
+      "ctrlPlusi": "go to newer position in jump list",
+      "ctrlPluso": "go to older position in jump list",
+      "colonchanges": "list of changes",
+      "gcomma": "go to newer position in change list",
+      "gsemicolon": "go to older position in change list",
+      "ctrlPlusCloseSquare": "jump to the tag under cursor"
+    },
+    "tip1": "To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.",
+    "tip": ""
+  },
+  "macros": {
+    "title": "Macros",
+    "commands": {
+      "recordA": "record macro a",
+      "stopRecording": "stop recording macro",
+      "runA": "run macro a",
+      "rerun": "rerun last run macro"
+    }
+  },
+  "global": {
+    "title": "Global",
+    "commands": {
+      "helpForKeyword": "open help for keyword",
+      "saveAsFile": "save file as",
+      "closePane": "close current pane",
+      "K": "open man page for word under the cursor",
+      "colonTerminal": "open a terminal window"
+    },
+    "tip1": "Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands."
+  },
+  "cutAndPaste": {
+    "title": "Memotong dan menempel",
+    "commands": {
+      "yy": "menyalin sebaris text",
+      "twoyy": "menyalin dua baris text",
+      "yw": "menyalin satu kata",
+      "yiw": "yank (copy) word under the cursor",
+      "yaw": "yank (copy) word under the cursor and the space after or before it",
+      "yDollar": "menyalin dari posisi sekarang hingga akhir baris saat ini",
+      "p": "menempelkan salinan dari clipboard setelah kursor",
+      "P": "menempelkan salinan dari clipboard sebelum kursor",
+      "gp": "put (paste) the clipboard after cursor and leave cursor after the new text",
+      "gP": "put (paste) before cursor and leave cursor after the new text",
+      "dd": "menghapus satu baris",
+      "twodd": "menghapus (memotong) dua baris",
+      "dw": "menghapus (memotong) kata",
+      "diw": "delete (cut) word under the cursor",
+      "daw": "delete (cut) word under the cursor and the space after or before it",
+      "dDollar": "menghapus (memotong) hingga ke akhir baris saat ini",
+      "x": "menghapus (memotong) satu karakter"
+    }
+  },
+  "indentText": {
+    "title": "Indent text",
+    "commands": {
+      "greaterThanGreaterThan": "indent (move right) line one shiftwidth",
+      "lessThanLessThan": "de-indent (move left) line one shiftwidth",
+      "greaterThanPercent": "indent a block with () or {} (cursor on brace)",
+      "greaterThanib": "indent inner block with ()",
+      "greaterThanat": "indent a block with <> tags",
+      "3==": "re-indent 3 lines",
+      "=Percent": "re-indent a block with () or {} (cursor on brace)",
+      "=iB": "re-indent inner block with {}",
+      "gg=G": "re-indent entire buffer",
+      "closeSquarep": "paste and adjust indent to current line"
+    }
+  },
+  "exiting": {
+    "title": "Keluar",
+    "commands": {
+      "colonw": "menulis (menyimpan) ke file, tapi tidak keluar",
+      "colonwsudo": "menulis (menyimpan) ke file dengan sudo",
+      "colonwq": "menulis (menyimpan) lalu keluar",
+      "colonx": "menulis (menyimpan) lalu keluar",
+      "colonq": "keluar (batal jika ada perubahan yang belum disimpan)",
+      "colonqbang": "keluar dan abaikan perubahan yang telah dibuat",
+      "colonwqa": "write (save) and quit on all tabs"
+    }
+  },
+  "searchAndReplace": {
+    "title": "Cari dan Tukar",
+    "commands": {
+      "forwardSlashPattern": "pencarian dengan pola",
+      "questionMarkPattern": "pencarian ke belakang dengan pola",
+      "backslashVpattern": "pola 'magic': karakter-karater non alfanumerik diinterpretaskan sebagai sebagai simbol regex khusus (tidak membutuhkan escape)",
+      "n": "ulangi pencarian ke arah selanjutnya",
+      "N": "ulangi pencarian ke arah sebaliknya",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashg": "tukar yang lama dengan yang baru di keseluruhan file",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashgc": "tukar yang lama dengan yang baru di kesluruhan file dengan konfirmasi",
+      "colonnoh": "menghilangkan sorotan pada hasil-hasil pencarian"
+    }
+  },
+  "searchMultipleFiles": {
+    "title": "Pencarian di beberapa file",
+    "commands": {
+      "colonvimgrep": "pencarian pola di beberapa file",
+      "coloncn": "lompat ke temuan selanjutnya",
+      "coloncp": "lompat ke temuan sebelumnya",
+      "coloncopen": "membuka windows baru yang menampilkan hasil temuan",
+      "coloncclose": "close the quickfix window"
+    }
+  },
+  "workingWithMultipleFiles": {
+    "title": "Bekerja dengan beberapa file",
+    "commands": {
+      "colone": "mengedit file di dalam buffer baru",
+      "colonbnext": "beralih ke buffer selanjutnya",
+      "colonbprev": "beralih ke buffer sebelumnya",
+      "colonls": "daftar buffer yang terbuka",
+      "colonbd": "menghapus buffer (menutup file)",
+      "colonbnumber": "go to a buffer by #",
+      "colonbfile": "go to a buffer by file",
+      "colonsp": "buka file di buffer baru dan split jendela",
+      "colonvsp": "buka file di buffer baru dan split jendela secara vertikal",
+      "colonvertba": "edit all buffers as vertical windows",
+      "colontabba": "edit all buffers as tabs",
+      "ctrlPlusws": "split jendela",
+      "ctrlPluswv": "split jendela secara vertikal",
+      "ctrlPlusww": "berganti jendela",
+      "ctrlPluswq": "keluar dari jendela",
+      "ctrlPluswx": "exchange current window with next one",
+      "ctrlPlusw=": "make all windows equal height & width",
+      "ctrlPluswh": "memindahkan kursor ke jendela kiri (split vertikal)",
+      "ctrlPluswl": "memindahkan kursor ke jendela kanan (split vertikal)",
+      "ctrlPluswj": "memindahkan kursor ke jendela bawah (split horizontal)",
+      "ctrlPluswk": "mmemindahkan kursor ke jendela atas (split horizontal)",
+      "ctrlPluswH": "make current window full height at far left (leftmost vertical window)",
+      "ctrlPluswL": "make current window full height at far right (rightmost vertical window)",
+      "ctrlPluswJ": "make current window full width at the very bottom (bottommost horizontal window)",
+      "ctrlPluswK": "make current window full width at the very top (topmost horizontal window)"
+    }
+  },
+  "tabs": {
+    "title": "Tabs",
+    "commands": {
+      "colonTabNew": "membuka file di tab baru",
+      "ctrlPluswT": "move the current split window into its own tab",
+      "gt": "pindah ke tab selanjutnya",
+      "gT": "pindah ke tab sebelumnya",
+      "hashgt": "pindah ke tab nomor #",
+      "colontabmove": "pindahkan tab saat ini ke urutan ke # (urutan mulai dari angka 0)",
+      "colontabc": "tutup tab saat ini dan semua jendela di dalamnya",
+      "colontabo": "tutup semua tab kecuali tab yang aktif saat ini",
+      "colontabdo": "menjalankan perintah <code>command</code> pada semua tab (misal: <code>:tabdo q</code> - akan menutup semua tab)"
+    }
+  },
+  "diff": {
+    "title": "Diff",
+    "commands": {
+      "zf": "manually define a fold up to motion",
+      "zd": "delete fold under the cursor",
+      "za": "toggle fold under the cursor",
+      "zo": "open fold under the cursor",
+      "zc": "close fold under the cursor",
+      "zr": "reduce (open) all folds by one level",
+      "zm": "fold more (close) all folds by one level",
+      "zi": "toggle folding functionality",
+      "closeSquarec": "jump to start of next change",
+      "openSquarec": "jump to start of previous change",
+      "do": "obtain (get) difference (from other buffer)",
+      "dp": "put difference (to other buffer)",
+      "colonDiffthis": "make current window part of diff",
+      "colonDiffupdate": "update differences",
+      "colonDiffoff": "switch off diff mode for current window"
+    },
+    "tip1": "The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).",
+    "tip2": "To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>."
+  },
+  "words": {
+    "keyword": "keyword",
+    "file": "file",
+    "movement": "movement"
+  },
+  "languages": {
+    "title": "Bahasa-bahasa"
+  },
+  "footer": "Dapatkan kode sumber di",
+  "layout": "page",
+  "permalink": "/lang/id/"
+}

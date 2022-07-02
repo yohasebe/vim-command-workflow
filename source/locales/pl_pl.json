@@ -1,0 +1,348 @@
+{
+  "title": "Polski",
+  "lang": "pl_pl",
+  "lang_tag": "pl",
+  "cursorMovement": {
+    "title": "Poruszanie kursorem",
+    "commands": {
+      "h": "przesuń kursor w lewo",
+      "j": "przesuń kursor w dół",
+      "k": "przesuń kursor w górę",
+      "l": "przesuń kursor w prawo",
+      "gj": "przesuń kursor w dół (w tekście wielowierszowym)",
+      "gk": "przesuń kursor w górę (w tekście wielowierszowym)",
+      "w": "skocz na początek następnego wyrazu",
+      "W": "skocz na początek następnego wyrazu (słowa mogą zawierać interpunkcję)",
+      "e": "skocz na koniec bieżącego wyrazu",
+      "E": "skocz na koniec bieżącego wyrazu (słowa mogą zawierać interpunkcję)",
+      "b": "skocz na początek bieżącego wyrazu",
+      "B": "skocz na początek bieżącego wyrazu (słowa mogą zawierać interpunkcję)",
+      "ge": "skocz wstecz do końca słowa",
+      "gE": "skocz wstecz do końca słowa (słowa mogą zawierać interpunkcję)",
+      "H": "skocz do góry ekranu",
+      "M": "skocz do połowy ekranu",
+      "L": "skocz do dołu ekranu",
+      "zero": "skocz na początek linii",
+      "caret": "przesuń kursor na pierwszy niepusty znak",
+      "dollar": "skocz na koniec wiersza",
+      "g_": "skocz do ostatniego niepustego znaku na końcu wiersza",
+      "gg": "skocz do pierwszego wiersza w pliku",
+      "G": "skocz do ostatniego wiersza w pliku",
+      "fiveG": "skocz do linii 5",
+      "gd": "skocz do deklaracji lokalnej",
+      "gD": "skocz do deklaracji globalnej",
+      "fx": "przesuń kursor na pierwszy znaleziony znak 'x'",
+      "tx": "przesuń kursor przed pierwszy znaleziony znak 'x'",
+      "Fx": "skocz do poprzedniego wystąpienia znaku x",
+      "Tx": "skocz do lokalizacji po ostatnim wystąpieniu znaku x",
+      "semicolon": "powtórz poprzednie ruchy f, t, F lub T",
+      "comma": "powtórz poprzednie ruchy f, t, F lub T wstecz",
+      "closeCurlyBrace": "skocz do następnego paragrafu (albo funkcji/bloku kodu w trakcie edycji kodu)",
+      "openCurlyBrace": "skocz do poprzedniego paragrafu (albo funkcji/bloku kodu w trakcie edycji kodu)",
+      "centerCursor": "wyśrodkuj kursor na ekranie",
+      "CtrlPluse": "przesuń ekran o jedną linię w dół (bez przesuwania kursowa)",
+      "CtrlPlusy": "przesuń ekran o jedną linię w górę (bez przesuwania kursowa)",
+      "CtrlPlusb": "przesuń ekran o całą jego wysokość w górę",
+      "CtrlPlusf": "przesuń ekran o całą jego wysokość w dół",
+      "CtrlPlusu": "przesuń ekran o połowę tekstu w górę",
+      "CtrlPlusd": "przesuń ekran o połowę tekstu w dół",
+      "percent": "przesuń do pasującego znaku (standardowo wspierane pary: '()', '{}', '[]' - użyj <code>:h matchpairs</code> w Vimie po więcej informacji)"
+    },
+    "tip": "Poprzedź komendę ruchu kursora liczbą powtórzeń. Na przykład <kbd>4j</kbd> przesunie w dół 4 wiersze"
+  },
+  "insertMode": {
+    "title": "Tryb wprowadzania tekstu: wstawianie/dodawanie tekstu",
+    "commands": {
+      "i": "wstaw przed kursorem",
+      "I": "wstaw na początku wiersza",
+      "a": "wstaw za kursorem",
+      "A": "przesuń kursor na koniec wiersza i wprowadź tekst od tej pozycji",
+      "o": "utwórz nowy wiersz poniżej bieżącego i wprowadź tekst",
+      "O": "utwórz nowy wiersz powyżej bieżącego i wprowadź tekst",
+      "ea": "wstaw na końcu wyrazu",
+      "ctrlPlush": "delete the character before the cursor during insert mode",
+      "ctrlPlusw": "delete word before the cursor during insert mode",
+      "ctrlPlusj": "begin new line during insert mode",
+      "ctrlPlust": "zwiększ wcięcie (przesuń w prawo) linię o jedną szerokość wcięcia w trybie edycji",
+      "ctrlPlusd": "zmniejsz wcięcie (przesuń w lewo) linię o jedną szerokość wcięcia w trybie edycji",
+      "ctrlPlusn": "insert (auto-complete) next match before the cursor during insert mode",
+      "ctrlPlusp": "insert (auto-complete) previous match before the cursor during insert mode",
+      "ctrlPlusrx": "wstaw zawartość rejestru x",
+      "ctrlPlusox": "Temporarily enter normal mode to issue one normal-mode command x.",
+      "Esc": "wyjdź z trybu wstawiania"
+    }
+  },
+  "editing": {
+    "title": "Edycja",
+    "commands": {
+      "r": "zamień pojedynczy znak pod kursorem",
+      "R": "replace more than one character, until <kbd>ESC</kbd> is pressed.",
+      "J": "połącz wiersze: dodaj wiersz poniżej do bieżącego",
+      "gJ": "połącz wiersze: dodaj wiersz poniżej do bieżącego bez spacji pomiędzy nimi",
+      "gwip": "reflow paragraph",
+      "gTilde": "switch case up to motion",
+      "gu": "change to lowercase up to motion",
+      "gU": "change to uppercase up to motion",
+      "cc": "zastąp cały wiersz",
+      "cDollar": "zastąp na końcu wiersza",
+      "ciw": "zastąp całe słowo",
+      "cw": "zastąp na końcu wyrazu",
+      "s": "zastąp znak wskazany przez kursor",
+      "S": "zastąp wiersz (takie samo znaczenie jak cc)",
+      "xp": "zastąp dwa znaki (usuń i wklej)",
+      "u": "cofnij",
+      "U": "cofnij (przywróc) ostatnio zmienioną linię",
+      "CtrlPlusr": "popraw",
+      "dot": "powtórz ostatnią komendę"
+    }
+  },
+  "markingText": {
+    "title": "Zaznaczanie tekstu",
+    "commands": {
+      "v": "uruchom tryb wizualny, zaznacz wiersze, potem wykonaj polecenie (podobnie jak y-kopiuj zaznaczony tekst)",
+      "V": "uruchom tryb wizualny",
+      "o": "przesuń na koniec zaznaczonej części",
+      "CtrlPlusv": "uruchom tryb wizualny",
+      "O": "przesuń do przeciwnego kąta bloku",
+      "aw": "zaznacz słowo",
+      "ab": "blok z ()",
+      "aB": "blok z {}",
+      "at": "a block with <> tags",
+      "ib": "wewnętrzny blok z ()",
+      "iB": "wewnętrzny blok z {}",
+      "it": "inner block with <> tags",
+      "Esc": "wyjdź z trybu wizualnego"
+    },
+    "tip1": "Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively."
+  },
+  "visualCommands": {
+    "title": "Komendy w trybie wizualnym",
+    "commands": {
+      "greaterThan": "przesuń tekst w prawo",
+      "lessThan": "przesuń tekst w lewo",
+      "y": "kopiuj zaznaczony tekst",
+      "d": "usuń zaznaczony tekst",
+      "tilde": "zmień wielkość liter",
+      "u": "zmień zaznaczony tekst na małe litery",
+      "U": "zmień zaznaczony tekst na wielkie litery"
+    }
+  },
+  "registers": {
+    "title": "Rejestry",
+    "commands": {
+      "show": "pokaż zawartość rejestrów",
+      "pasteRegisterX": "wklej zawartość rejestru x",
+      "yankIntoRegisterX": "kopiuj do rejestru x",
+      "quotePlusy": "yank into the system clipboard register",
+      "quotePlusp": "paste from the system clipboard register"
+    },
+    "tip1": "Rejestry zostały zapisane w ~/.viminfo i zostaną załadowane przy ponownym uruchomieniu vima",
+    "tip2": {
+      "0": "ostatno skopiowany tekst",
+      "title": "Rejestry specjalne:",
+      "quote": "nienazwany rejestr, ostatnio skopiowany lub usunięty tekst",
+      "percent": "bieżąca nazwa pliku",
+      "hashtag": "alternatywna nazwa pliku",
+      "asterisk": "clipboard contents (X11 primary)",
+      "plus": "clipboard contents (X11 clipboard)",
+      "slash": "ostatnio wyszukiwany wzorzec",
+      "colon": "last command-line",
+      "dot": "ostatnio wstawiony tekst",
+      "minus": "last small (less than a line) delete",
+      "equal": "expression register",
+      "underscore": "black hole register"
+    }
+  },
+  "marks": {
+    "title": "Oznaczanie",
+    "commands": {
+      "list": "pokaż listę wszystkich zaznaczeń",
+      "currentPositionA": "ustaw bieżącą pozycję na oznaczenie A",
+      "jumpPositionA": "przeskocz do pozycji oznaczenia A",
+      "yankToMarkA": "kopiuj tekst do pozycji oznaczenia A",
+      "backtick0": "go to the position where Vim was previously exited",
+      "backtickQuote": "go to the position when last editing this file",
+      "backtickDot": "go to the position of the last change in this file",
+      "backtickBacktick": "go to the position before the last jump",
+      "colonjumps": "lista skoków",
+      "ctrlPlusi": "go to newer position in jump list",
+      "ctrlPluso": "go to older position in jump list",
+      "colonchanges": "list of changes",
+      "gcomma": "go to newer position in change list",
+      "gsemicolon": "go to older position in change list",
+      "ctrlPlusCloseSquare": "jump to the tag under cursor"
+    },
+    "tip1": "To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.",
+    "tip": ""
+  },
+  "macros": {
+    "title": "Makra",
+    "commands": {
+      "recordA": "nagraj makro A",
+      "stopRecording": "przerwij nagrywanie makra",
+      "runA": "odtwórz makro A",
+      "rerun": "powtórz ostatnio odtworzone makro"
+    }
+  },
+  "global": {
+    "title": "Globalne",
+    "commands": {
+      "helpForKeyword": "otwórz pomoc dla słowa kluczowego",
+      "saveAsFile": "zapisz plik jako",
+      "closePane": "zamknij okienko nawigacji",
+      "K": "open man page for word under the cursor",
+      "colonTerminal": "open a terminal window",
+      "openFile": "otwórz plik"
+    },
+    "tip1": "Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands."
+  },
+  "cutAndPaste": {
+    "title": "Wytnij i wklej",
+    "commands": {
+      "yy": "kopiuj wiersz",
+      "twoyy": "kopiuj dwa wiersze",
+      "yw": "kopiuj litery wyrazu od miejsca, gdzie znajduje się kursor, na początek następnego słowa",
+      "yiw": "kopiuj wyraz pod kursorem",
+      "yaw": "kopiuj wyraz pod kursorem i spacje przed lub za tym wyrazem",
+      "yDollar": "kopiuj na koniec wiersza",
+      "p": "wklej zawartość schowka za kursorem",
+      "P": "wklej przed kursorem",
+      "gp": "wklej zawartość schowka za kursorem i postaw kursor za wklejonym tekstem",
+      "gP": "wklej przed kursorem i postaw kursor za wklejonym tekstem",
+      "dd": "kasuj wiersz",
+      "twodd": "kasuj dwa wiersze",
+      "dw": "kasuj litery wyrazu od miejsca, gdzie znajduje się kursor, na początek następnego słowa",
+      "diw": "kasuj wyraz pod kursorem",
+      "daw": "kopiuj wyraz pod kursorem i spację przed wyrazem lub za nim",
+      "dDollar": "kasuj na końcu wiersza",
+      "x": "usuń znak"
+    }
+  },
+  "indentText": {
+    "title": "Indent text",
+    "commands": {
+      "greaterThanGreaterThan": "zwiększ wcięcie (przesuń w prawo) o jedną szerokość wcięcia",
+		"lessThanLessThan": "zmniejsz wcięcie (przesuń w lewo) o jedną szerokość wcięcia",
+      "greaterThanPercent": "zwiększ więcie bloku ograniczonego () lub {} (kursor on nawiasie)",
+      "greaterThanib": "indent inner block with ()",
+      "greaterThanat": "indent a block with <> tags",
+      "3==": "re-indent 3 lines",
+      "=Percent": "re-indent a block with () or {} (cursor on brace)",
+      "=iB": "re-indent inner block with {}",
+      "gg=G": "re-indent entire buffer",
+      "closeSquarep": "paste and adjust indent to current line"
+    }
+  },
+  "exiting": {
+    "title": "Wychodzenie",
+    "commands": {
+      "colonw": "zapisz plik, ale nie wychodź",
+      "colonwsudo": "zapisz plik używając sudo",
+      "colonwq": "zapisz i wyjdź",
+      "colonx": "zapisz i wyjdź",
+      "colonq": "wyjdź (nie zadziała, jeśli są niezapisane zmiany)",
+      "colonqbang": "wyjdź i odrzuć niezapisane zmiany",
+      "colonwqa": "write (save) and quit on all tabs"
+    }
+  },
+  "searchAndReplace": {
+    "title": "Szukaj i zastąp",
+    "commands": {
+      "forwardSlashPattern": "szukaj wzoru",
+      "questionMarkPattern": "szukaj wzoru wstecz",
+      "backslashVpattern": "'magiczny' wzór: nie alfanumeryczne znaki są rozumiane jako wyrażenia regularne - regex (bez wstawiania ukośników)",
+      "n": "powtórz szukanie w tym samym kierunku",
+      "N": "powtórz szukanie w przeciwnym kierunku",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashg": "zastąp wszystkie stare z nowymi w całym pliku",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashgc": "zastąp wszystkie stare z nowymi w całym pliku z potwierdzeniem",
+      "colonnoh": "usuń podświetlone wyniki"
+    }
+  },
+  "searchMultipleFiles": {
+    "title": "Szukaj w wielu plikach równocześnie",
+    "commands": {
+      "colonvimgrep": "szukaj wzorca w wielu plikach",
+      "coloncn": "skocz do następnego dopasowania",
+      "coloncp": "skocz do poprzedniego dopasowania",
+      "coloncopen": "otwórz okno zawierające listę dopasowań",
+      "coloncclose": "close the quickfix window"
+    }
+  },
+  "workingWithMultipleFiles": {
+    "title": "Praca z wieloma plikami",
+    "commands": {
+      "colone": "edytuj plik w nowym buforze",
+      "colonbnext": "idź do następnego bufora",
+      "colonbprev": "wróć do poprzedniego bufora",
+      "colonls": "zrób listę wszystkich otwartych buforów",
+      "colonbd": "usuń bufer (zamknij plik)",
+      "colonbnumber": "go to a buffer by #",
+      "colonbfile": "go to a buffer by file",
+      "colonsp": "otwórz plik w nowym buforze i podziel okno",
+      "colonvsp": "otwórz plik w nowym buforze i podziel okno wertykalnie",
+      "colonvertba": "edit all buffers as vertical windows",
+      "colontabba": "edit all buffers as tabs",
+      "ctrlPlusws": "podziel okno",
+      "ctrlPluswv": "podziel okno wertykalnie",
+      "ctrlPlusww": "przełącz okno",
+      "ctrlPluswq": "wyjdź z okna",
+      "ctrlPluswx": "exchange current window with next one",
+      "ctrlPlusw=": "make all windows equal height & width",
+      "ctrlPluswh": "przesuń kursor do lewego okna (podział wertykalny)",
+      "ctrlPluswl": "przesuń kursor do prawego okna (podział wertykalny)",
+      "ctrlPluswj": "przesuń kursor do okna poniżej (podział horyzontalny)",
+      "ctrlPluswk": "przesuń kursor do okna powyżej (podział horyzontalny)",
+      "ctrlPluswH": "make current window full height at far left (leftmost vertical window)",
+      "ctrlPluswL": "make current window full height at far right (rightmost vertical window)",
+      "ctrlPluswJ": "make current window full width at the very bottom (bottommost horizontal window)",
+      "ctrlPluswK": "make current window full width at the very top (topmost horizontal window)"
+    }
+  },
+  "tabs": {
+    "title": "Karty",
+    "commands": {
+      "colonTabNew": "otwórz plik w nowej karcie",
+      "ctrlPluswT": "przesuń podzielone okno do oddzielnej karty",
+      "gt": "przesuń do następnej karty",
+      "gT": "przesuń do poprzedniej karty",
+      "hashgt": "przesuń do karty numer #",
+      "colontabmove": "przesuń kartę do pozycji #th (liczonej od 0)",
+      "colontabc": "zamknij kartę i wszystkie jej okna",
+      "colontabo": "zamknij wszystkie karty oprócz bieżącej",
+      "colontabdo": "wykonaj <code>polecenie</code> we wszystkich kartach (np. <code>:tabdo q</code> - zamyka wszystkie otwarte karty)"
+    }
+  },
+  "diff": {
+    "title": "Diff",
+    "commands": {
+      "zf": "manually define a fold up to motion",
+      "zd": "delete fold under the cursor",
+      "za": "toggle fold under the cursor",
+      "zo": "open fold under the cursor",
+      "zc": "close fold under the cursor",
+      "zr": "reduce (open) all folds by one level",
+      "zm": "fold more (close) all folds by one level",
+      "zi": "toggle folding functionality",
+      "closeSquarec": "jump to start of next change",
+      "openSquarec": "jump to start of previous change",
+      "do": "obtain (get) difference (from other buffer)",
+      "dp": "put difference (to other buffer)",
+      "colonDiffthis": "make current window part of diff",
+      "colonDiffupdate": "update differences",
+      "colonDiffoff": "switch off diff mode for current window"
+    },
+    "tip1": "The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).",
+    "tip2": "To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>."
+  },
+  "words": {
+    "keyword": "keyword",
+    "file": "file",
+    "movement": "movement"
+  },
+  "languages": {
+    "title": "Languages"
+  },
+  "footer": "Sprawdź źródło na",
+  "layout": "page",
+  "permalink": "/lang/pl_pl/"
+}

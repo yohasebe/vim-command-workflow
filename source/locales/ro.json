@@ -1,0 +1,349 @@
+{
+  "title": "Romana",
+  "lang": "ro",
+  "lang_tag": "ro",
+  "cursorMovement": {
+    "title": "Mutarea cursorului",
+    "commands": {
+      "h": "muta cursorul la stanga",
+      "j": "muta cursorul la dreapta",
+      "k": "muta cursolul in sus",
+      "l": "muta cursolul in jos",
+      "gj": "move cursor down (multi-line text)",
+      "gk": "move cursor up (multi-line text)",
+      "w": "sari la inceputul cuvantului",
+      "W": "sari la inceputul cuvantului (cuvintele pot contine semne de punctuatie)",
+      "e": "sari la sfarsitul cuvantului",
+      "E": "sari la sfarsitul cuvantului (cuvintele pot contine semne de punctuatie)",
+      "b": "sari inapoi la inceputul cuvantului",
+      "B": "sari inapoi la inceputul cuvantului (cuvintele pot contine semne de punctuatie)",
+      "ge": "jump backwards to the end of a word",
+      "gE": "jump backwards to the end of a word (words can contain punctuation)",
+      "H": "dute la inceputul ecranului",
+      "M": "dute la mijlocul ecranului",
+      "L": "dute la sfarsitul ecranului",
+      "zero": "sari la inceputul liniei",
+      "caret": "sari la primul caracter care nu e liber de la inceputul liniei",
+      "dollar": "sari la sfarsitul liniei",
+      "g_": "sari la ultimul caracter non-blank al liniei",
+      "gg": "dute la prima linie a documentului",
+      "G": "dute la ultima linie a documentului",
+      "fiveG": "dute la linia 5",
+      "gd": "move to local declaration",
+      "gD": "move to global declaration",
+      "fx": "dute la urmatoarea referinta a caracterului x",
+      "tx": "dute la referinta precendenta a caracterului x",
+      "Fx": "cursorMovement.commands.Fx",
+      "Tx": "cursorMovement.commands.Tx",
+      "semicolon": "cursorMovement.commands.semicolon",
+      "comma": "cursorMovement.commands.comma",
+      "closeCurlyBrace": "sari la urmatorul paragraf (sau functie/bloc, cand editezi cod)",
+      "openCurlyBrace": "cursorMovement.commands.openCurlyBrace",
+      "centerCursor": "cursorMovement.commands.centerCursor",
+      "CtrlPluse": "cursorMovement.commands.CtrlPluse",
+      "CtrlPlusy": "cursorMovement.commands.CtrlPlusy",
+      "CtrlPlusb": "mergi inapoi un ecran intreg",
+      "CtrlPlusf": "mergi inainte un ecran intreg",
+      "CtrlPlusu": "mergi inapoi jumatate de ecran",
+      "CtrlPlusd": "mergi inainte jumatate de ecran",
+      "percent": "cursorMovement.commands.percent",
+      "operCurlyBrace": "sari la paragraful anterior (sau functie/bloc, cand editezi cod)"
+    },
+    "tip": "Prefixeaza comanda de miscare a cursorului cu un numar pentru a o repeta. De exemplu, <kbd>4j</kbd> muta cursorul cu 4 linii in jos."
+  },
+  "insertMode": {
+    "title": "Modul de inserare - inserare/adaugare text",
+    "commands": {
+      "i": "insereaza inainte de cursor",
+      "I": "insereaza la inceputul liniei",
+      "a": "insereaza (adauga) dupa cursor",
+      "A": "insereaza (adauga) la sfarsitul liniei",
+      "o": "adauga (deschide) o noua linie sub linia curenta",
+      "O": "adauga (deschide) o noua linie inaintea liniei curente",
+      "ea": "insereaza (adauga) la sfarsitul cuvantului",
+      "ctrlPlush": "delete the character before the cursor during insert mode",
+      "ctrlPlusw": "delete word before the cursor during insert mode",
+      "ctrlPlusj": "begin new line during insert mode",
+      "ctrlPlust": "indent (move right) line one shiftwidth during insert mode",
+      "ctrlPlusd": "de-indent (move left) line one shiftwidth during insert mode",
+      "ctrlPlusn": "insert (auto-complete) next match before the cursor during insert mode",
+      "ctrlPlusp": "insert (auto-complete) previous match before the cursor during insert mode",
+      "ctrlPlusrx": "insert the contents of register x",
+      "ctrlPlusox": "Temporarily enter normal mode to issue one normal-mode command x.",
+      "Esc": "iesi din modul inserare"
+    }
+  },
+  "editing": {
+    "title": "Editare",
+    "commands": {
+      "r": "inlocuieste un singur caracter",
+      "R": "replace more than one character, until <kbd>ESC</kbd> is pressed.",
+      "J": "lipeste lina curenta cu cea dedesubt",
+      "gJ": "editing.commands.gJ",
+      "gwip": "editing.commands.gwip",
+      "gTilde": "switch case up to motion",
+      "gu": "change to lowercase up to motion",
+      "gU": "change to uppercase up to motion",
+      "cc": "schimba (inlocuieste) toata linia",
+      "cDollar": "schimba (inlocuieste) pana la sfarsitul liniei",
+      "ciw": "editing.commands.ciw",
+      "cw": "schimba (inlocuieste) pana la sfarsitul cuvantului",
+      "s": "sterge caracterul si inlocuieste",
+      "S": "sterge linia si inlocuieste (asemeni <kbd>cc</kbd>)",
+      "xp": "transpune 2 caractere (sterge si lipeste)",
+      "u": "undo (anulare)",
+      "U": "restore (undo) last changed line",
+      "CtrlPlusr": "redo (refacere)",
+      "dot": "repeta comanda anterioara"
+    }
+  },
+  "markingText": {
+    "title": "Marcarea textului (modul vizual)",
+    "commands": {
+      "v": "incepe modul vizual, marcheaza linii, apoi trimite o comanda (precum <kbd>y</kbd>-copie)",
+      "V": "incepe modul vizual in relatie cu liniile",
+      "o": "dute la sfarsitul sectiunii marcate",
+      "CtrlPlusv": "incepe modul vizual de tip sectiune",
+      "O": "dute la celalat colt al sectiunii",
+      "aw": "marcheaza un cuvant",
+      "ab": "o sectiune cu ()",
+      "aB": "o sectiune cu {}",
+      "at": "a block with <> tags",
+      "ib": "sectiunea interioara cu ()",
+      "iB": "sectiunea interioara cu {}",
+      "it": "inner block with <> tags",
+      "Esc": "iesi din modul vizual"
+    },
+    "tip1": "Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively."
+  },
+  "visualCommands": {
+    "title": "Commandes du mode visuel",
+    "commands": {
+      "greaterThan": "muta textul la dreapta",
+      "lessThan": "muta textul la stanga",
+      "y": "copie textul markat",
+      "d": "sterge textul marcat",
+      "tilde": "schimba capitala caracterului (majuscula/litera mica)",
+      "u": "change marked text to lowercase",
+      "U": "change marked text to uppercase"
+    }
+  },
+  "registers": {
+    "title": "Registre",
+    "commands": {
+      "show": "arata continutul registrelor",
+      "pasteRegisterX": "lipeste continutul registului x",
+      "yankIntoRegisterX": "copie in registrul x",
+      "quotePlusy": "yank into the system clipboard register",
+      "quotePlusp": "paste from the system clipboard register"
+    },
+    "tip1": "Registrele sunt salvate in ~/.viminfo, si vor fi incarcate din nou la urmatorul restart",
+    "tip2": {
+      "0": "last yank",
+      "title": "Special registers:",
+      "quote": "unnamed register, last delete or yank",
+      "percent": "current file name",
+      "hashtag": "alternate file name",
+      "asterisk": "clipboard contents (X11 primary)",
+      "plus": "clipboard contents (X11 clipboard)",
+      "slash": "last search pattern",
+      "colon": "last command-line",
+      "dot": "last inserted text",
+      "minus": "last small (less than a line) delete",
+      "equal": "expression register",
+      "underscore": "black hole register"
+    }
+  },
+  "marks": {
+    "title": "Insemne",
+    "commands": {
+      "list": "lista insemnelor",
+      "currentPositionA": "seteaza pozitia curenta pentru insemnul A",
+      "jumpPositionA": "sari la pozitia insemnului A",
+      "yankToMarkA": "copie textul pana la pozitia insemnului A",
+      "backtick0": "go to the position where Vim was previously exited",
+      "backtickQuote": "go to the position when last editing this file",
+      "backtickDot": "go to the position of the last change in this file",
+      "backtickBacktick": "go to the position before the last jump",
+      "colonjumps": "list of jumps",
+      "ctrlPlusi": "go to newer position in jump list",
+      "ctrlPluso": "go to older position in jump list",
+      "colonchanges": "list of changes",
+      "gcomma": "go to newer position in change list",
+      "gsemicolon": "go to older position in change list",
+      "ctrlPlusCloseSquare": "jump to the tag under cursor"
+    },
+    "tip1": "To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.",
+    "tip": ""
+  },
+  "macros": {
+    "title": "Macros",
+    "commands": {
+      "recordA": "inregistreaza macro-ul a",
+      "stopRecording": "termina inregistrea macro-ului a",
+      "runA": "ruleaza macro a",
+      "rerun": "ruleaza ultimul macro"
+    }
+  },
+  "global": {
+    "title": "Global",
+    "commands": {
+      "helpForKeyword": "ajutor pentru cuvantul keye",
+      "saveAsFile": "salveaza fisierul ca",
+      "closePane": "inchide panoul current",
+      "K": "global.commands.K",
+      "colonTerminal": "open a terminal window",
+      "openFile": "deschide fisier"
+    },
+    "tip1": "Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands."
+  },
+  "cutAndPaste": {
+    "title": "Copiere/taiere si lipire",
+    "commands": {
+      "yy": "copie o linie",
+      "twoyy": "copie 2 linii",
+      "yw": "copie un cuvant",
+      "yiw": "copie cuvantul de sub cursor",
+      "yaw": "copie cuvantul de sub cursor si spatiul dinaintea lui",
+      "yDollar": "copie pana la sfarsitul liniei",
+      "p": "lipeste din clipboard dupa cursor",
+      "P": "lipeste inainte de cursor",
+      "gp": "put (paste) the clipboard after cursor and leave cursor after the new text",
+      "gP": "put (paste) before cursor and leave cursor after the new text",
+      "dd": "sterge (taie) o linie",
+      "twodd": "sterge (taie) 2 linii",
+      "dw": "sterge (taie) un cuvant",
+      "diw": "sterge (taie) cuvantul de sub cursor",
+      "daw": "sterge (taie) cuvantul de sub cursor si spatiul de dinainte si dupa el",
+      "dDollar": "sterge (taie) pana la sfarsitul liniei",
+      "x": "sterge (taie) un caracter"
+    }
+  },
+  "indentText": {
+    "title": "Indent text",
+    "commands": {
+      "greaterThanGreaterThan": "indent (move right) line one shiftwidth",
+      "lessThanLessThan": "de-indent (move left) line one shiftwidth",
+      "greaterThanPercent": "indent a block with () or {} (cursor on brace)",
+      "greaterThanib": "indent inner block with ()",
+      "greaterThanat": "indent a block with <> tags",
+      "3==": "re-indent 3 lines",
+      "=Percent": "re-indent a block with () or {} (cursor on brace)",
+      "=iB": "re-indent inner block with {}",
+      "gg=G": "re-indent entire buffer",
+      "closeSquarep": "paste and adjust indent to current line"
+    }
+  },
+  "exiting": {
+    "title": "Iesire",
+    "commands": {
+      "colonw": "salveaza fisierul, dar nu iesi",
+      "colonwsudo": "salveaza fisierul folosind sudo",
+      "colonwq": "salveaza fisierul si iesi din program",
+      "colonx": "salveaza fisierul si iesi din program",
+      "colonq": "iesi din program (nu iese daca fisierul nu este salvat)",
+      "colonqbang": "iesi si sterge modificarile din fisier",
+      "colonwqa": "exiting.commands.colonwqa"
+    }
+  },
+  "searchAndReplace": {
+    "title": "Cauta si inlocuieste",
+    "commands": {
+      "forwardSlashPattern": "cauta dupa sablon",
+      "questionMarkPattern": "cauta inapoi dupa sablon",
+      "backslashVpattern": "sablon 'foarte magic': caracterele non-alfanumerice sunt interpretate ca symboluri regex (nu e nevoie de escaping)",
+      "n": "repeta cautarea inainte",
+      "N": "repeta cautarea inapoi",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashg": "inlocuieste peste tot old cu new in fisier",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashgc": "inlocuieste peste tot old cu new in fisier cu confirmare",
+      "colonnoh": "sterge highlightul cuvintelor potrivite"
+    }
+  },
+  "searchMultipleFiles": {
+    "title": "Cauta in fisiere multiple",
+    "commands": {
+      "colonvimgrep": "cauta dupa sablon in fisiere multiple",
+      "coloncn": "sari la urmatoarea potrivire",
+      "coloncp": "sari la potrivirea anterioara",
+      "coloncopen": "deschide o fereastra care contine lista de potriviri",
+      "coloncclose": "close the quickfix window"
+    }
+  },
+  "workingWithMultipleFiles": {
+    "title": "Editarea fisierelor multiple",
+    "commands": {
+      "colone": "editeaza fisierul respectin intr-un nou buffer",
+      "colonbnext": "dute la urmatorul buffer",
+      "colonbprev": "dute la bufferul anterior",
+      "colonls": "arata o lista cu bufferele deschise",
+      "colonbd": "sterge un buffer (inchide fisierul)",
+      "colonbnumber": "go to a buffer by #",
+      "colonbfile": "go to a buffer by file",
+      "colonsp": "deschide fisierul intr-un buffer now si imparte fereastra",
+      "colonvsp": "deschide fisierul intr-un buffer now si imparte fereastra vertical",
+      "colonvertba": "edit all buffers as vertical windows",
+      "colontabba": "edit all buffers as tabs",
+      "ctrlPlusws": "imparte fereastra orizontal",
+      "ctrlPluswv": "imparte fereastra vertical",
+      "ctrlPlusww": "schimba fereastra",
+      "ctrlPluswq": "iesi din fereastra",
+      "ctrlPluswx": "exchange current window with next one",
+      "ctrlPlusw=": "make all windows equal height & width",
+      "ctrlPluswh": "muta cursorul in fereastra din stanga (vertical)",
+      "ctrlPluswl": "muta cursorul in fereastra din dreapta (vertical)",
+      "ctrlPluswj": "muta cursorul in fereastra de sus (orizontal)",
+      "ctrlPluswk": "muta cursorul in fereastra de jos (orizontal)",
+      "ctrlPluswH": "make current window full height at far left (leftmost vertical window)",
+      "ctrlPluswL": "make current window full height at far right (rightmost vertical window)",
+      "ctrlPluswJ": "make current window full width at the very bottom (bottommost horizontal window)",
+      "ctrlPluswK": "make current window full width at the very top (topmost horizontal window)"
+    }
+  },
+  "tabs": {
+    "title": "Taburi",
+    "commands": {
+      "colonTabNew": "deschide fisierul intr-un tab nou",
+      "ctrlPluswT": "muta fereastra curenta in propriul tab",
+      "gt": "dute la urmatorul tab",
+      "gT": "dute la tabul anterior",
+      "hashgt": "dute la tabul cu numarul <kbd>#</kbd>",
+      "colontabmove": "dute la tabul din pozitia <kbd>#</kbd>",
+      "colontabc": "inchide tabul curent si toate ferestrele lui",
+      "colontabo": "inchide toate taburile in afara de cel curent",
+      "colontabdo": "ruleaza <code>comanda</code> in toate taburile (ex <code>:tabo q</code> - inchide toate taburile deschise)"
+    }
+  },
+  "diff": {
+    "title": "Diff",
+    "commands": {
+      "zf": "manually define a fold up to motion",
+      "zd": "delete fold under the cursor",
+      "za": "toggle fold under the cursor",
+      "zo": "open fold under the cursor",
+      "zc": "close fold under the cursor",
+      "zr": "reduce (open) all folds by one level",
+      "zm": "fold more (close) all folds by one level",
+      "zi": "toggle folding functionality",
+      "closeSquarec": "jump to start of next change",
+      "openSquarec": "jump to start of previous change",
+      "do": "obtain (get) difference (from other buffer)",
+      "dp": "put difference (to other buffer)",
+      "colonDiffthis": "make current window part of diff",
+      "colonDiffupdate": "update differences",
+      "colonDiffoff": "switch off diff mode for current window"
+    },
+    "tip1": "The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).",
+    "tip2": "To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>."
+  },
+  "words": {
+    "keyword": "cuvant keye",
+    "file": "fisier",
+    "movement": "miscare"
+  },
+  "languages": {
+    "title": "Alta limba"
+  },
+  "footer": "Resurse aditionale",
+  "layout": "page",
+  "permalink": "/lang/ro/"
+}

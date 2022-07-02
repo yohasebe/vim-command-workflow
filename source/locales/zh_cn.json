@@ -1,0 +1,348 @@
+{
+  "title": "简体中文",
+  "lang": "zh_cn",
+  "lang_tag": "zh",
+  "cursorMovement": {
+    "title": "移动光标",
+    "commands": {
+      "h": "左移光标",
+      "j": "下移光标",
+      "k": "上移光标",
+      "l": "右移光标",
+      "gj": "move cursor down (multi-line text)",
+      "gk": "move cursor up (multi-line text)",
+      "w": "移动到下个单词开头",
+      "W": "移动到下个单词开头(单词含标点)",
+      "e": "移动到下个单词结尾",
+      "E": "移动到下个单词结尾(单词含标点)",
+      "b": "移动到上个单词开头",
+      "B": "移动到上个单词开头(单词含标点)",
+      "ge": "移动到上个单词结尾",
+      "gE": "移动到上个单词结尾(单词含标点)",
+      "H": "移动到当前页面顶部",
+      "M": "移动到当前页面中间",
+      "L": "移动到当前页面底部",
+      "zero": "移动到行首",
+      "caret": "移动到行首的非空白符",
+      "dollar": "移动到行尾",
+      "g_": "移动到行内最后一个非空白符",
+      "gg": "移动到文件第一行",
+      "G": "移动到文件最后一行",
+      "fiveG": "移动到第五行",
+      "gd": "跳转到局部定义",
+      "gD": "跳转到全局定义",
+      "fx": "移动到字符 x 下次出现的位置",
+      "tx": "移动到字符 x 下次出现的位置的前一个字符",
+      "Fx": "移动到字符 x 上次出现的位置",
+      "Tx": "移动到字符 x 上次出现的位置的后一个字符",
+      "semicolon": "重复之前的f、t、F、T操作",
+      "comma": "反向重复之前的f、t、F、T操作",
+      "closeCurlyBrace": "移动到下一个段落 (当编辑代码时则为函数／代码块)",
+      "openCurlyBrace": "移动到上一个段落 (当编辑代码时则为函数／代码块)",
+      "centerCursor": "移动屏幕使光标居中",
+      "CtrlPluse": "向下移动屏幕一行(保持光标不动)",
+      "CtrlPlusy": "向上移动屏幕一行(保持光标不动)",
+      "CtrlPlusb": "向上滚动一屏",
+      "CtrlPlusf": "向下滚动一屏",
+      "CtrlPlusu": "向上滚动半屏",
+      "CtrlPlusd": "向下滚动半屏",
+      "percent": "跳转到配对的符号(默认支持的配对符号组:: '()', '{}', '[]' - 在vim中使用 <code>:h matchpairs</code> 获得更多信息)"
+    },
+    "tip": "命令前追加数字表示命令的重复次数, 比如 <kbd>4j</kbd> 表示向下移动四行"
+  },
+  "insertMode": {
+    "title": "插入模式 - 插入/追加文本",
+    "commands": {
+      "i": "从光标前开始插入字符",
+      "I": "从行首开始插入字符",
+      "a": "从光标后开始插入字符",
+      "A": "从行尾开始插入字符",
+      "o": "在当前行之下另起一行, 开始插入字符",
+      "O": "在当前行之上另起一行, 开始插入字符",
+      "ea": "从当前单词末尾开始插入",
+      "ctrlPlush": "在插入模式下，删除光标前的字符",
+      "ctrlPlusw": "在插入模式下，删除光标前的单词",
+      "ctrlPlusj": "在插入模式下，另起一行",
+      "ctrlPlust": "在插入模式下，向右缩进，宽度由 shiftwidth 控制",
+      "ctrlPlusd": "在插入模式下，向左缩进，宽度由 shiftwidth 控制",
+      "ctrlPlusn": "在插入模式下，在光标之前插入自动补全的下一个匹配项",
+      "ctrlPlusp": "在插入模式下，在光标之前插入自动补全的上一个匹配项",
+      "ctrlPlusrx": "插入寄存器 x 的内容",
+      "ctrlPlusox": "暂时进入正常模式以发出一个正常模式命令 x。",
+      "Esc": "退出插入模式"
+    }
+  },
+  "editing": {
+    "title": "编辑文本",
+    "commands": {
+      "r": "替换当前字符",
+      "R": "在 <kbd>ESC</kbd> 按下之前，替换多个字符",
+      "J": "将下一行合并到当前行, 并在两部分文本之间插入一个空格",
+      "gJ": "将下一行合并到当前行, 两部分文本之间不含空格",
+      "gwip": "重新调整段落",
+      "gTilde": "switch case up to motion",
+      "gu": "小写操作修饰符",
+      "gU": "大写操作修饰符",
+      "cc": "将光标所在的行删除, 然后进入插入模式",
+      "cDollar": "将光标处到行尾删除, 然后进入插入模式",
+      "ciw": "将光标所在的单词删除, 然后进入插入模式",
+      "cw": "从光标位置开始, 修改单词",
+      "s": "删除当前字符, 然后进入插入模式",
+      "S": "清空当前行, 然后进入插入模式 (同<kbd>cc</kbd>)",
+      "xp": "当前字符后移",
+      "u": "撤销",
+      "U": "撤销上一次的改动行的操作",
+      "CtrlPlusr": "重做（取消撤销）",
+      "dot": "再次执行上个命令"
+    }
+  },
+  "markingText": {
+    "title": "选择文本（可视化模式）",
+    "commands": {
+      "v": "进入可视化模式, 移动光标高亮选择, 然后可以对选择的文本执行命令(比如<kbd>y</kbd>-复制)",
+      "V": "进入可视化模式(行粒度选择)",
+      "o": "切换光标到选择区开头/结尾",
+      "CtrlPlusv": "进入可视化模式(矩阵选择)",
+      "O": "切换光标到选择区的角",
+      "aw": "选择当前单词",
+      "ab": "选择被 () 包裹的区域(含括号)",
+      "aB": "选择被 {} 包裹的区域(含花括号)",
+      "at": "选择被 <> 标签包裹的区域(含<>标签)",
+      "ib": "选择被 () 包裹的区域(不含括号)",
+      "iB": "选择被 {} 包裹的区域(不含花括号)",
+      "it": "选择被 <> 标签包裹的区域(不含<>标签)",
+      "Esc": "退出可视化模式"
+    },
+    "tip1": "也可以使用 <kbd>(</kbd> 和 <kbd>{</kbd> 分别代替 <kbd>b</kbd> 和 <kbd>B</kbd> "
+  },
+  "visualCommands": {
+    "title": "可视化模式命令",
+    "commands": {
+      "greaterThan": "向右缩进",
+      "lessThan": "向左缩进",
+      "y": "复制",
+      "d": "剪切",
+      "tilde": "大小写切换",
+      "u": "将选中文本转换为小写",
+      "U": "将选中文本转换为大写"
+    }
+  },
+  "registers": {
+    "title": "寄存器",
+    "commands": {
+      "show": "显示寄存器内容",
+      "pasteRegisterX": "粘贴寄存器 x 中的内容",
+      "yankIntoRegisterX": "复制内容到寄存器 x",
+      "quotePlusy": "复制内容到系统剪贴板寄存器",
+      "quotePlusp": "粘贴系统剪贴板寄存器的内容"
+    },
+    "tip1": "寄存器被存储在 ~/.viminfo 中, 在下次重启vim时仍会加载",
+    "tip2": {
+      "0": "上次复制",
+      "title": "特殊寄存器：",
+      "quote": "未命名寄存器，上次复制或删除",
+      "percent": "当前文件名",
+      "hashtag": "轮换文件名",
+      "asterisk": "剪贴板内容 (X11 primary)",
+      "plus": "剪贴板内容 (X11 clipboard)",
+      "slash": "上次搜索的pattern",
+      "colon": "上次执行的命令",
+      "dot": "上次插入的文本",
+      "minus": "上次剪切的短于一行的文本",
+      "equal": "表达式寄存器",
+      "underscore": "黑洞寄存器"
+    }
+  },
+  "marks": {
+    "title": "标记",
+    "commands": {
+      "list": "标记列表",
+      "currentPositionA": "设置当前位置为标记 a",
+      "jumpPositionA": "跳转到标记 a 的位置",
+      "yankToMarkA": "复制当前位置到标记 a 的内容",
+      "backtick0": "go to the position where Vim was previously exited",
+      "backtickQuote": "go to the position when last editing this file",
+      "backtickDot": "go to the position of the last change in this file",
+      "backtickBacktick": "go to the position before the last jump",
+      "colonjumps": "list of jumps",
+      "ctrlPlusi": "go to newer position in jump list",
+      "ctrlPluso": "go to older position in jump list",
+      "colonchanges": "list of changes",
+      "gcomma": "go to newer position in change list",
+      "gsemicolon": "go to older position in change list",
+      "ctrlPlusCloseSquare": "jump to the tag under cursor"
+    },
+    "tip1": "To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.",
+    "tip": ""
+  },
+  "macros": {
+    "title": "宏",
+    "commands": {
+      "recordA": "录制宏 a",
+      "stopRecording": "停止录制宏",
+      "runA": "执行宏 a",
+      "rerun": "重新执行上次执行的宏"
+    }
+  },
+  "global": {
+    "title": "全局",
+    "commands": {
+      "helpForKeyword": "打开关键字帮助",
+      "saveAsFile": "另存为",
+      "closePane": "关闭当前窗口",
+      "K": "打开光标所在单词的man页面",
+      "colonTerminal": "打开一个shell窗口",
+      "openFile": "打开文件"
+    },
+    "tip1": "Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands."
+  },
+  "cutAndPaste": {
+    "title": "剪切, 复制, 粘贴",
+    "commands": {
+      "yy": "复制当前行",
+      "twoyy": "复制 2 行",
+      "yw": "复制当前单词",
+      "yiw": "复制光标处的单词",
+      "yaw": "复制光标处的单词及其前后的空格",
+      "yDollar": "复制, 从光标位置到行末",
+      "p": "在光标后粘贴",
+      "P": "在光标前粘贴",
+      "gp": "put (paste) the clipboard after cursor and leave cursor after the new text",
+      "gP": "put (paste) before cursor and leave cursor after the new text",
+      "dd": "剪切当前行",
+      "twodd": "剪切 2 行",
+      "dw": "剪切当前单词",
+      "diw": "删除光标处的单词",
+      "daw": "删除光标处的单词及其前后的空格",
+      "dDollar": "剪切, 从光标位置到行末 (同<kbd>D</kbd>)",
+      "x": "剪切当前字符"
+    }
+  },
+  "indentText": {
+    "title": "文字缩进",
+    "commands": {
+      "greaterThanGreaterThan": "将当前行向右缩进，宽度由 shiftwidth 控制",
+      "lessThanLessThan": "将当前行向左缩进，宽度由 shiftwidth 控制",
+      "greaterThanPercent": "向右缩进 () 或 {} 内的区域 (光标需置于括号上)",
+      "greaterThanib": "向右缩进 () 内的区域",
+      "greaterThanat": "向右缩进 <> 标签内的区域",
+      "3==": "自动缩进 3 行",
+      "=Percent": "自动缩进 () 或 {} 内的区域 (光标需置于括号上)",
+      "=iB": "自动缩进 {} 内的区域 (光标需置于括号上)",
+      "gg=G": "自动缩进整个缓冲区",
+      "closeSquarep": "粘贴并调整缩进至当前行"
+    }
+  },
+  "exiting": {
+    "title": "退出",
+    "commands": {
+      "colonw": "保存",
+      "colonwsudo": "使用 sudo 保存当前文件",
+      "colonwq": "保存并退出",
+      "colonx": "保存并退出(同<kbd>:wq</kbd>)",
+      "colonq": "退出(修改未保存时警告)",
+      "colonqbang": "不保存强制退出",
+      "colonwqa": "保存所有标签页并全部退出"
+    }
+  },
+  "searchAndReplace": {
+    "title": "查找/替换",
+    "commands": {
+      "forwardSlashPattern": "查找<kbd>pattern</kbd>",
+      "questionMarkPattern": "向上查找<kbd>pattern</kbd>",
+      "backslashVpattern": "<kbd>pattern</kbd> 中的非字母数字字符被视为正则表达式特殊字符 (不需转义字符)",
+      "n": "查找下一个",
+      "N": "查找上一个",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashg": "替换全部",
+      "colonPercentForwardSlashOldForwardSlashNewForwardSlashgc": "(逐个)替换",
+      "colonnoh": "移除搜索结果的高亮显示"
+    }
+  },
+  "searchMultipleFiles": {
+    "title": "多文件搜索",
+    "commands": {
+      "colonvimgrep": "在多个文件中搜索 <kbd>pattern</kbd>",
+      "coloncn": "移动至下一个",
+      "coloncp": "移动至上一个",
+      "coloncopen": "打开搜索结果列表",
+      "coloncclose": "close the quickfix window"
+    }
+  },
+  "workingWithMultipleFiles": {
+    "title": "多文件编辑",
+    "commands": {
+      "colone": "新建缓冲区打开 filename",
+      "colonbnext": "切换到下个缓冲区",
+      "colonbprev": "切换到上个缓冲区",
+      "colonls": "列出所有打开的缓冲区",
+      "colonbd": "关闭缓冲区",
+      "colonbnumber": "go to a buffer by #",
+      "colonbfile": "go to a buffer by file",
+      "colonsp": "新建缓冲区打开 filename 并水平分割窗口",
+      "colonvsp": "新缓冲区打开 filename 并垂直分割窗口",
+      "colonvertba": "edit all buffers as vertical windows",
+      "colontabba": "edit all buffers as tabs",
+      "ctrlPlusws": "水平分割窗口",
+      "ctrlPluswv": "垂直分割窗口",
+      "ctrlPlusww": "在窗口间切换",
+      "ctrlPluswq": "关闭窗口",
+      "ctrlPluswx": "exchange current window with next one",
+      "ctrlPlusw=": "make all windows equal height & width",
+      "ctrlPluswh": "切换到左侧窗口",
+      "ctrlPluswl": "切换到右侧窗口",
+      "ctrlPluswj": "切换到下侧窗口",
+      "ctrlPluswk": "切换到上侧窗口",
+      "ctrlPluswH": "使游标所在视窗全高并移至最左 (最左垂直视窗)",
+      "ctrlPluswL": "使游标所在视窗全高并移至最右 (最右垂直视窗)",
+      "ctrlPluswJ": "使游标所在视窗全宽并移至最下 (最下水平视窗)",
+      "ctrlPluswK": "使游标所在视窗全宽并移至最上 (最上水平视窗)"
+    }
+  },
+  "tabs": {
+    "title": "标签",
+    "commands": {
+      "colonTabNew": "在新标签中打开文件",
+      "ctrlPluswT": "将窗口变成标签",
+      "gt": "切换到下一个标签",
+      "gT": "切换到上一个标签",
+      "hashgt": "切换到第 <kbd>#</kbd> 个标签",
+      "colontabmove": "移动标签到第 <kbd>#</kbd> 位(下标从 0 开始)",
+      "colontabc": "关闭当前标签",
+      "colontabo": "关闭其他标签",
+      "colontabdo": "在所有标签中执行命令 (例如 <kbd>:tabdo q</kbd> 关闭所有标签)"
+    }
+  },
+  "diff": {
+    "title": "Diff",
+    "commands": {
+      "zf": "manually define a fold up to motion",
+      "zd": "delete fold under the cursor",
+      "za": "toggle fold under the cursor",
+      "zo": "open fold under the cursor",
+      "zc": "close fold under the cursor",
+      "zr": "reduce (open) all folds by one level",
+      "zm": "fold more (close) all folds by one level",
+      "zi": "toggle folding functionality",
+      "closeSquarec": "jump to start of next change",
+      "openSquarec": "jump to start of previous change",
+      "do": "obtain (get) difference (from other buffer)",
+      "dp": "put difference (to other buffer)",
+      "colonDiffthis": "make current window part of diff",
+      "colonDiffupdate": "update differences",
+      "colonDiffoff": "switch off diff mode for current window"
+    },
+    "tip1": "The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).",
+    "tip2": "To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>."
+  },
+  "words": {
+    "keyword": "关键字",
+    "file": "文件名",
+    "movement": "移动"
+  },
+  "languages": {
+    "title": "语言"
+  },
+  "footer": "源代码",
+  "layout": "page",
+  "permalink": "/lang/zh_cn/"
+}
