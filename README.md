@@ -8,7 +8,7 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 
 ## Installation
 
-1. Download [vim-command.alfredworkflow] (current version is `0.1.0`).
+1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.0`).
 2. Double-click the workflow file
 3. Press [x] button on the upper right corner of the Alfred's workflow pane
 4. Set values to the variables if necessary (see below)
