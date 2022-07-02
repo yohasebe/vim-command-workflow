@@ -21,7 +21,7 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow down commands returned by typing-in one or more search keys.
 
 - Type `vimc` into Alfred or use a hotkey if set.
-- You can enter one or more search keys to narrow down the commands returned. 
+- You can enter one or more search keys to narrow down the commands returned.
 
 ## Available Options
 
@@ -44,7 +44,7 @@ The command description can be displayed in one of the following languages, depe
 | עברית           | `he`     |
 | Hrvatski             | `hr`     |
 | Bahasa Indonesia     | `id`     |
-| Italiano             | it     |
+| Italiano             | `it`     |
 | 日本語               | `ja`     |
 | 한국어               | `ko`     |
 | မြန်မာ                  | `mm`     |
