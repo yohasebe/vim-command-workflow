@@ -2117,7 +2117,7 @@ def apply_template(en_data, data)
       "ascript" => ''
     },
     {
-      "key"  => "s/^.*$\\n//",
+      "key"  => ":s/^.*$\\n//",
       "catcode"=> "regex",
       "category"=> data["regex"]["title"],
       "desc" => data["regex"]["commands"]["deleteEmptyLines"],
@@ -2125,7 +2125,7 @@ def apply_template(en_data, data)
       "ascript" => ''
     },
     {
-      "key"  => "s/<­pat­ter­n>/new &/",
+      "key"  => ":s/<­pat­ter­n>/new &/",
       "catcode"=> "regex",
       "category"=> data["regex"]["title"],
       "desc" => data["regex"]["commands"]["replacePattern"],
@@ -2133,7 +2133,7 @@ def apply_template(en_data, data)
       "ascript" => ''
     },
     {
-      "key"  => "s/<­pat­ter­\\n>/\­\=@a/",
+      "key"  => ":s/<­pat­ter­\\n>/\­\=@a/",
       "catcode"=> "regex",
       "category"=> data["regex"]["title"],
       "desc" => data["regex"]["commands"]["replacePatternByRegister"],
@@ -2141,7 +2141,7 @@ def apply_template(en_data, data)
       "ascript" => ''
     },
     {
-      "key"  => "s/<­pat­ter­n>//gn",
+      "key"  => ":s/<­pat­ter­n>//gn",
       "catcode"=> "regex",
       "category"=> data["regex"]["title"],
       "desc" => data["regex"]["commands"]["countNumOccurrence"],
