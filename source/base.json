@@ -28,7 +28,7 @@
       "openBrackets": "Move to previous misspelled word before the cursor",
       "z=": "Suggest spellings for the word under/after the cursor",
       "zg": "Add word to spell list",
-      "zw": "Add word to spell list",
+      "zw": "Mark word as bad/mispelling",
       "zu": "Suggest words for bad word under cursor from spell file"
     }
   }

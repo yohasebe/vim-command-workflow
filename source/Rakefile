@@ -1,0 +1,7 @@
+$:.unshift File.dirname(__FILE__)
+
+desc 'Compile Ruby Cheatsheet json files to be used by the workflow'
+
+task :compile do
+  load 'compile.rb'
+end
