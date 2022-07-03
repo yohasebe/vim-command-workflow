@@ -1974,7 +1974,7 @@ vim_cheatsheet.each do |v|
       "type": "file",
       "path": File.join(dcurrent, "img", "#{v['catcode']}.png")
     },
-    "match": v['search']
+    "match": "#{v['search']} #{v['category']} #{v['key']}"
   }
   item["uid"] = v['catcode'] + "-" + v['category'] unless fixed_order
   items << item

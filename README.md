@@ -2,19 +2,19 @@
 
 **An Alfred workflow to search Vim command cheat sheet + *run* commands**
 
-This is an Alfred workflow that searches a Vim command cheat sheet and sends vim commands directly to the front-most application running Vim, Neovim, etc.
+This is an Alfred workflow that searchs a Vim command cheat sheet and sends vim commands directly to the front-most application running Vim, Neovim, etc.
 
 It uses the data from the awesome multi-lingual Vim cheat sheet project [https://github.com/rtorr/vim-cheat-sheet](https://github.com/rtorr/vim-cheat-sheet).
 
 <img src='https://github.com/yohasebe/vim-command-workflow/blob/main/source/img/screenshot-01.png?raw=true' width="700" />
 
-## Installation
+## installation
 
-1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.2`).
-2. Double-click the workflow file
-3. Press [x] button on the upper right corner of the Alfred's workflow pane
-4. Set values to the variables if necessary (see below)
-5. Set up a hotkey trigger (`^⇧⌘V`, for instance)
+1. download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.2`).
+2. double-click the workflow file
+3. press [x] button on the upper right corner of the alfred's workflow pane
+4. set values to the variables if necessary (see below)
+5. set up a hotkey trigger (`^⇧⌘v`, for instance)
 
 ## Usage
 
