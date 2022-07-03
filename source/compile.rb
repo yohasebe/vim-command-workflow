@@ -26,6 +26,23 @@ def preprocess(json)
   results
 end
 
+def convert(items)
+  {
+    "items" => items.map do |v|
+      {
+        "title": "#{v['desc']}".capitalize,
+        "subtitle": "#{v['category']} ⎯  #{v['key']}",
+        "arg": [v['ascript']],
+        "icon": {
+          "type": "file",
+          "path": File.join("img", "#{v['catcode']}.png")
+        },
+        "match": "#{v['search']} #{v['category']} #{v['key']}"
+      }
+    end
+  }
+end
+
 fcurrent = File.dirname(__FILE__)
 dcurrent = File.expand_path(fcurrent)
 
@@ -41,10 +58,11 @@ Dir.foreach(File.join(dcurrent, "locales")) do |item|
   locale_json= File.read(File.join(dcurrent, "locales", item))
   locale_data  = JSON.parse(preprocess(locale_json))
   data = base_data.deep_merge locale_data
-  compiled = apply_template(en_data, data).to_json
+  applied = apply_template(en_data, data)
+  compiled = convert(applied)
   fcompiled = File.join(dcurrent, "compiled", locale + ".json")
   File.open(fcompiled, "w") do |f|
-    f.write compiled
+    f.write compiled.to_json
   end
 end
 

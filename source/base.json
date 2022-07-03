@@ -1,5 +1,11 @@
 {
   "title": "Base",
+  "workingWithMultipleFiles": {
+    "title": "Working with multiple files",
+    "commands": {
+      "colonWa": "Save all open buffers at once"
+    }
+  },
   "searchAndReplace": {
     "commands": {
       "asterisk": "Next whole word under cursor",
@@ -16,7 +22,9 @@
     "commands": {
       "Ctrla": "Increment number",
       "Ctrlx": "Decrement number",
-      "gv": "Re-select last selected block of text"
+      "gv": "Re-select last selected block of text",
+      "CtrlrEqual": "Insert the result of an expression at the cursor",
+      "setFencUtf": "Change file encoding to UTF-8"
     }
   },
   "spell": {

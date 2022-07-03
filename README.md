@@ -6,15 +6,15 @@ This is an Alfred workflow that searches a Vim command cheat sheet and sends vim
 
 It uses the data from the awesome multi-lingual Vim cheat sheet project [https://github.com/rtorr/vim-cheat-sheet](https://github.com/rtorr/vim-cheat-sheet).
 
-<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screencast-01.gif?raw=true' width="800" />
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screenshot-01.png?raw=true' width="700" />
 
 ## installation
 
-1. download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.3`).
-2. double-click the workflow file
-3. press [x] button on the upper right corner of the alfred's workflow pane
-4. set values to the variables if necessary (see below)
-5. set up a hotkey trigger (`^⇧⌘v`, for instance)
+1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.4`).
+2. Double-click the workflow file
+3. Press [x] button on the upper right corner of the Alfred's workflow pane
+4. Set values to the variables if necessary (see below)
+5. Set up a hotkey trigger (`^⇧⌘v`, for instance)
 
 ## Usage
 
@@ -23,6 +23,8 @@ Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow d
 - Type `vimc` into Alfred or use a hotkey if set
 - Enter one or more search keys to narrow down the commands returned
 - Select a command and the Vim command will automatically be typed into the front-most app
+
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screencast-01.gif?raw=true' width="800" />
 
 ## Available Options
 
@@ -66,14 +68,6 @@ The command description can be displayed in one of the following languages, depe
 | [简体中文](https://vim.rtorr.com/lang/zh_cn)             | `zh_cn`  |
 | [中文 (台灣)](https://vim.rtorr.com/lang/zh_tw)          | `zh_tw`  |
 
-### Separator
+## Author
 
-You can set `separator` to any string you like, including emojis 😀.
-
-<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screenshot-01.png?raw=true' width="700" />
-
-<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screenshot-02.png?raw=true' width="700" />
-
-### Order of Search Results
-
-If `fixed_order` is set to true, the command list will be displayed in a fixed order each time it is called. Set to `false` if you want to order them according to past usage.
+Yoichiro Hasebe (<yohasebe@gmail.com>)

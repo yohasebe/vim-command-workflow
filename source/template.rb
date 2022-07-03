@@ -1423,13 +1423,29 @@ def apply_template(en_data, data)
       "search" => en_data["searchMultipleFiles"]["commands"]["coloncclose"],
       "ascript" => 'keystroke ":ccl" & return',
     },
+    {
+      "key"  => "colonWa",
+      "catcode"=> "searchMultipleFiles",
+      "category"=> data["searchMultipleFiles"]["title"],
+      "desc" => data["searchMultipleFiles"]["commands"]["colonWa"],
+      "search" => en_data["searchMultipleFiles"]["commands"]["colonWa"],
+      "ascript" => 'keystroke ":wa" & return',
+    },
+    {
+      "key"  => ":ccl[ose]",
+      "catcode"=> "searchMultipleFiles",
+      "category"=> data["searchMultipleFiles"]["title"],
+      "desc" => data["searchMultipleFiles"]["commands"]["coloncclose"],
+      "search" => en_data["searchMultipleFiles"]["commands"]["coloncclose"],
+      "ascript" => 'keystroke ":ccl" & return',
+    },
     #'tabs.title'
     {
       "key"  => ":tabnew or :tabnew file",
       "catcode"=> "tabs",
       "category"=> data["tabs"]["title"],
-      "desc" => data["tabs"]["commands"]["coloncclose"],
-      "search" => en_data["tabs"]["commands"]["coloncclose"],
+      "desc" => data["tabs"]["commands"]["colonTabNew"],
+      "search" => en_data["tabs"]["commands"]["colonTabNew"],
       "ascript" => 'keystroke ":tabnew"//key code 49//keystroke "file" & return',
     },
     {
@@ -1914,6 +1930,15 @@ def apply_template(en_data, data)
       "category"=> data["misc"]["title"],
       "desc" => data["misc"]["commands"]["CtrlrEqual"],
       "search" => en_data["misc"]["commands"]["CtrlrEqual"],
+      "ascript" => 'keystroke "r" using control down//keystroke "="'
+    },
+    {
+      "key"  => "setFencUtf",
+      "catcode"=> "misc",
+      "category"=> data["misc"]["title"],
+      "desc" => data["misc"]["commands"]["setFencUtf"],
+      "search" => en_data["misc"]["commands"]["setFencUtf"],
+      "ascript" => 'keystroke "set"//key code 49//keystroke "fenc=UTF-8"'
     },
   ]
 end
