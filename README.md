@@ -6,7 +6,7 @@ This is an Alfred workflow that searches a Vim command cheat sheet and sends vim
 
 It uses the data from the awesome multi-lingual Vim cheat sheet project [https://github.com/rtorr/vim-cheat-sheet](https://github.com/rtorr/vim-cheat-sheet).
 
-<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/source/img/screenshot-01.png?raw=true' width="700" />
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screencast-01.gif?raw=true' width="700" />
 
 ## installation
 
@@ -69,6 +69,8 @@ The command description can be displayed in one of the following languages, depe
 ### Separator
 
 You can set `separator` to any string you like, including emojis 😀.
+
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screenshot-01.png?raw=true' width="700" />
 
 <img src='https://github.com/yohasebe/vim-command-workflow/blob/main/source/img/screenshot-02.png?raw=true' width="700" />
 
