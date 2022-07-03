@@ -378,7 +378,7 @@ def apply_template(en_data, data)
       "search" => en_data["cursorMovement"]["commands"]["CtrlPlusd"],
       "ascript" => 'keystroke "d" using control down',
     },
-    # 'insertMode.title'
+    # 'insertMode
     {
       "key"  => "i",
       "catcode"=> "insertMode",
@@ -523,7 +523,7 @@ def apply_template(en_data, data)
       "search" => en_data["insertMode"]["commands"]["Esc"],
       "ascript" => 'key code 53',
     },
-    # 'editing.title'
+    # 'editing
     {
       "key"  => "r",
       "catcode"=> "editing",
@@ -676,7 +676,7 @@ def apply_template(en_data, data)
       "search" => en_data["editing"]["commands"]["dot"],
       "ascript" => 'keystroke "."',
     },
-    # 'markingText.title'
+    # 'markingText
     {
       "key"  => "v",
       "catcode"=> "markingText",
@@ -781,7 +781,7 @@ def apply_template(en_data, data)
       "search" => en_data["markingText"]["commands"]["Esc"],
       "ascript" => 'key code 53',
     },
-    # 'visualCommands.title'
+    # 'visualCommands
     {
       "key"  => ">",
       "catcode"=> "visualCommands",
@@ -838,7 +838,7 @@ def apply_template(en_data, data)
       "search" => en_data["visualCommands"]["commands"]["U"],
       "ascript" => 'keystroke "U"',
     },
-    # 'registers.title'
+    # 'registers
     {
       "key"  => ":reg[isters]",
       "catcode"=> "registers",
@@ -879,7 +879,7 @@ def apply_template(en_data, data)
       "search" => en_data["registers"]["commands"]["quotePlusp"],
       "ascript" => 'keystroke "+p"',
     },
-    # 'marks.title'
+    # 'marks
     {
       "key"  => "ma",
       "catcode"=> "marks",
@@ -1000,7 +1000,7 @@ def apply_template(en_data, data)
       "search" => en_data["marks"]["commands"]["gf"],
       "ascript" => 'keystroke "gf"',
     },
-    # 'macros.title'
+    # 'macros
     {
       "key"  => "qa",
       "catcode"=> "macros",
@@ -1034,7 +1034,7 @@ def apply_template(en_data, data)
       "ascript" => 'keystroke "@@"',
     },
 
-    # 'cutAndPaste.title'
+    # 'cutAndPaste
     {
       "key"  => "yy",
       "catcode"=> "cutAndPaste",
@@ -1171,7 +1171,7 @@ def apply_template(en_data, data)
       "search" => en_data["cutAndPaste"]["commands"]["x"],
       "ascript" => 'keystroke "x"',
     },
-    # 'indentText.title'
+    # 'indentText
     {
       "key"  => ">>",
       "catcode"=> "indentText",
@@ -1252,7 +1252,7 @@ def apply_template(en_data, data)
       "search" => en_data["indentText"]["commands"]["closeSquarep"],
       "ascript" => 'keystroke "]p"',
     },
-    # 'exiting.title'
+    # 'exiting
     {
       "key"  => ":w",
       "catcode"=> "exiting",
@@ -1301,7 +1301,7 @@ def apply_template(en_data, data)
       "search" => en_data["exiting"]["commands"]["colonwqa"],
       "ascript" => 'keystroke ":wqa" & return',
     },
-    #'searchAndReplace.title'
+    #'searchAndReplace
     {
       "key"  => "/pattern",
       "catcode"=> "searchAndReplace",
@@ -1382,7 +1382,7 @@ def apply_template(en_data, data)
       "search" => en_data["searchAndReplace"]["commands"]["hash"],
       "ascript" => 'keystroke "#"',
     },
-    # 'searchMultipleFiles.title'
+    # 'searchMultipleFiles
     {
       "key"  => ":vim[grep] /pattern/ file",
       "catcode"=> "searchMultipleFiles",
@@ -1439,7 +1439,7 @@ def apply_template(en_data, data)
       "search" => en_data["searchMultipleFiles"]["commands"]["coloncclose"],
       "ascript" => 'keystroke ":ccl" & return',
     },
-    #'tabs.title'
+    #'tabs
     {
       "key"  => ":tabnew or :tabnew file",
       "catcode"=> "tabs",
@@ -1512,7 +1512,7 @@ def apply_template(en_data, data)
       "search" => en_data["tabs"]["commands"]["colontabdo"],
       "ascript" => 'keystroke ":tabdo"//key code 49//keystroke "command"',
     },
-    # 'workingWithMultipleFiles.title'
+    # 'workingWithMultipleFiles
     {
       "key"  => ":e[dit] file",
       "catcode"=> "workingWithMultipleFiles",
@@ -1713,7 +1713,7 @@ def apply_template(en_data, data)
       "search" => en_data["workingWithMultipleFiles"]["commands"]["ctrlPluswK"],
       "ascript" => 'keystroke "w" using control down//keystroke "K"',
     },
-    # 'diff.title'
+    # 'diff
     {
       "key"  => "zf",
       "catcode"=> "diff",
@@ -1939,6 +1939,214 @@ def apply_template(en_data, data)
       "desc" => data["misc"]["commands"]["setFencUtf"],
       "search" => en_data["misc"]["commands"]["setFencUtf"],
       "ascript" => 'keystroke "set"//key code 49//keystroke "fenc=UTF-8"'
+    },
+    {
+      "key"  => "\\",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["backslash"],
+      "search" => en_data["regex"]["commands"]["backslash"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "^",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["hat"],
+      "search" => en_data["regex"]["commands"]["hat"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "$",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["dollar"],
+      "search" => en_data["regex"]["commands"]["dollar"],
+      "ascript" => ''
+    },
+    {
+      "key"  => ".",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["dot"],
+      "search" => en_data["regex"]["commands"]["dot"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "*",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["star"],
+      "search" => en_data["regex"]["commands"]["star"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "~",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["tilde"],
+      "search" => en_data["regex"]["commands"]["tilde"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "[...]",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["range"],
+      "search" => en_data["regex"]["commands"]["range"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "[^...]",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["notRange"],
+      "search" => en_data["regex"]["commands"]["notRange"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "&",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["ampersand"],
+      "search" => en_data["regex"]["commands"]["ampersand"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\<",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["backSlashLessThan"],
+      "search" => en_data["regex"]["commands"]["backSlashLessThan"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\>",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["backSlashGreaterThan"],
+      "search" => en_data["regex"]["commands"]["backSlashGreaterThan"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\(...\\)",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["group"],
+      "search" => en_data["regex"]["commands"]["group"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\|",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["separator"],
+      "search" => en_data["regex"]["commands"]["separator"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\_.",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["anyChar"],
+      "search" => en_data["regex"]["commands"]["anyChar"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\+",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["oneOrMore"],
+      "search" => en_data["regex"]["commands"]["oneOrMore"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\=",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["backSlashEqual"],
+      "search" => en_data["regex"]["commands"]["backSlashEqual"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\?",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["backSlashQuestion"],
+      "search" => en_data["regex"]["commands"]["backSlashQuestion"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\{n,m}",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["nToM"],
+      "search" => en_data["regex"]["commands"]["nToM"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\{n}",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["nQuantifier"],
+      "search" => en_data["regex"]["commands"]["nQuantifier"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\{n,}",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["atLeastN"],
+      "search" => en_data["regex"]["commands"]["atLeastN"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "\\{,m}",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["zeroToM"],
+      "search" => en_data["regex"]["commands"]["zeroToM"],
+      "ascript" => ''
+    },
+    {
+      "key"  => ":g/<pa­tte­rn>/d",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["delAllLinesMatching"],
+      "search" => en_data["regex"]["commands"]["delAllLinesMatching"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "s/^.*$\\n//",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["deleteEmptyLines"],
+      "search" => en_data["regex"]["commands"]["deleteEmptyLines"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "s/<­pat­ter­n>/new &/",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["replacePattern"],
+      "search" => en_data["regex"]["commands"]["replacePattern"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "s/<­pat­ter­\\n>/\­\=@a/",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["replacePatternByRegister"],
+      "search" => en_data["regex"]["commands"]["replacePatternByRegister"],
+      "ascript" => ''
+    },
+    {
+      "key"  => "s/<­pat­ter­n>//gn",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["countNumOccurrence"],
+      "search" => en_data["regex"]["commands"]["countNumOccurrence"],
+      "ascript" => ''
     },
   ]
 end

@@ -39,5 +39,36 @@
       "zw": "Mark word as bad/mispelling",
       "zu": "Suggest words for bad word under cursor from spell file"
     }
+  },
+  "regex": {
+    "title": "Regex (reference only)",
+    "commands": {
+      "backslash": "Escape next character (Regex operator)",
+      "hat": "Start-of­-line (Regex operator)",
+      "dollar": "End-of-­line (Regex operator)",
+      "dot": "Any char (Regex operator)",
+      "star": "0 or more quantifier (Regex operator)",
+      "tilde": "Match last given substitute string (Regex operator)",
+      "range": "Match range (Regex operator)",
+      "notRange": "Not range (Regex operator)",
+      "ampersand": "In replacement: insert whole matched pattern (Regex operator)",
+      "backSlashLessThan": "Beginning of a word",
+      "backSlashGreaterThan": "End of word",
+      "group": "Group",
+      "separator": "Separate alternative",
+      "anyChar": "Any single char or end-of­line",
+      "oneOrMore": "1 or more quantifier",
+      "backSlashEqual": "0 or 1 quantifier",
+      "backSlashQuestion": "0 or 1 quantifier",
+      "nToM": "n to m quantifier",
+      "nQuantifier": "n quantifier",
+      "atLeastN": "at least n quantifier",
+      "zeroToM": "0 to m quantifier",
+      "delAllLinesMatching": "delete all lines matching pattern",
+      "deleteEmptyLines": "delete empty lines",
+      "replacePattern": "Replace pattern by 'new <whole matched pattern>'",
+      "replacePatternByRegister": "Replace pattern by content of register",
+      "countNumOccurrence": "Count number of occurrence of pattern"
+    }
   }
 }
