@@ -8,13 +8,16 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 
 <img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screenshot-01.png?raw=true' width="700" />
 
+## Requirements
+
+- [Alfred](https://www.alfredapp.com/) (4 or 5)
+- [Alfred Powerpack](https://www.alfredapp.com/shop/)
+
 ## installation
 
-1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.4.1`).
+1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.5`).
 2. Double-click the workflow file
-3. Press [x] button on the upper right corner of the Alfred's workflow pane
-4. Set values to the variables if necessary (see below)
-5. Set up a hotkey trigger (`^⇧⌘v`, for instance)
+3. Set up a hotkey trigger (`^⇧⌘v` for instance)
 
 ## Usage
 
@@ -26,11 +29,11 @@ Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow d
 
 <img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screencast-01.gif?raw=true' width="800" />
 
-## Available Options
+## Locale
 
-### Locale
+Vim command descriptions are displayed in one of the following languages, depending on the setting of the variable `locale` (default value: `en_us`).
 
-The command description can be displayed in one of the following languages, depending on the setting of the variable `locale` (default value: `en_us`).
+To set locale, type `set locale` in Alfred and choosing from the list. Alternatively, press [x] button on the upper right corner of the Alfred's workflow and go to the "Environment Variables" section.
 
 **N.B.** Currently, searches are always performed against the cheat sheet in `en_us`, regardless of `locale` setting.
 
