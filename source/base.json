@@ -41,7 +41,7 @@
     }
   },
   "regex": {
-    "title": "Regex (reference only)",
+    "title": "Regex",
     "commands": {
       "backslash": "Escape next character",
       "hat": "Start-of­-line",

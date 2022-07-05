@@ -15,7 +15,7 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 
 ## Installation
 
-1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.5`).
+1. Download [vim-command.alfredworkflow](https://github.com/yohasebe/vim-command-workflow/raw/main/vim-command.alfredworkflow) (current version is `0.1.6`).
 2. Double-click the workflow file
 3. Set up a hotkey trigger (`^⇧⌘v` for instance)
 

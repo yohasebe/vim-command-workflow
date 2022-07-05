@@ -29,9 +29,10 @@ end
 def convert(items)
   {
     "items" => items.map do |v|
+      ref_only = v['ref_only'] ? " (Reference only)" : ""
       {
         "title": "#{v['desc']}".capitalize,
-        "subtitle": "#{v['category']} ⎯  #{v['key']}",
+        "subtitle": "#{v['category']}#{ref_only} ⎯  #{v['key']}",
         "arg": [v['ascript']],
         "icon": {
           "type": "file",
