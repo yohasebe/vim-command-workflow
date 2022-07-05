@@ -51,7 +51,7 @@
       "tilde": "Match last given substitute string",
       "range": "Match range",
       "notRange": "Not range",
-      "ampersand": "In replacement: insert whole matched pattern",
+      "ampersand": "In replacement: insert <pattern>",
       "backSlashLessThan": "Beginning of a word",
       "backSlashGreaterThan": "End of word",
       "group": "Group",
@@ -65,10 +65,17 @@
       "atLeastN": "at least n quantifier",
       "zeroToM": "0 to m quantifier",
       "delAllLinesMatching": "delete all lines matching pattern",
+      "delAllLinesNotMatching": "delete all lines NOT matching <pattern>",
       "deleteEmptyLines": "delete empty lines",
-      "replacePattern": "Replace pattern by 'new <whole matched pattern>'",
-      "replacePatternByRegister": "Replace pattern by content of register",
-      "countNumOccurrence": "Count number of occurrence of pattern"
+      "replacePattern": "Replace <pattern> by 'new <pattern>'",
+      "replacePatternByRegister": "Replace <pattern> by content of register",
+      "countNumOccurrence": "Count number of occurrence of <pattern>",
+      "matchStart": "Match start",
+      "matchEnd": "Match end",
+      "positiveLookBehind": "Positive look behind to find <pattern>",
+      "positiveLookAhead": "Positive look ahead to find <pattern>",
+      "negativeLookBehind": "Negative look behind to find <pattern>",
+      "negativeLookAhead": "Negative look ahead to find <pattern>"
     }
   }
 }
