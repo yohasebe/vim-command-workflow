@@ -23,6 +23,7 @@ def preprocess(json)
   results = json.gsub(/<[^<>]+>([^<>]+)<\/[^<>]+>/){$1}
   results.gsub!(/'\(\)'/){""}
   results.gsub!(/\([^\(\)]+\)/){""}
+  results.gsub!(/(".+?": ".+?)\:.+"/){$1 + '"'}
   results
 end
 
