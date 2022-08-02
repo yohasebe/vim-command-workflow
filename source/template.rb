@@ -779,7 +779,7 @@ def apply_template(en_data, data)
       "category"=> data["visualCommands"]["title"],
       "desc" => data["visualCommands"]["commands"]["greaterThan"],
       "search" => en_data["visualCommands"]["commands"]["greaterThan"],
-      "ascript" => 'keystroke ">"',      
+      "ascript" => 'keystroke ">"',
       "ref_only" => true,
     },
     {
@@ -2202,6 +2202,14 @@ def apply_template(en_data, data)
       "desc" => data["regex"]["commands"]["negativeLookAhead"],
       "search" => en_data["regex"]["commands"]["negativeLookAhead"],
       "ascript" => 'keystroke "<pattern><atom>\\\\@!"',
-    }
+    },
+    {
+      "key" => "\\{-}",
+      "catcode"=> "regex",
+      "category"=> data["regex"]["title"],
+      "desc" => data["regex"]["commands"]["nonGreedyQuantifier"],
+      "search" => en_data["regex"]["commands"]["nonGreedyQuantifier"],
+      "ascript" => 'keystroke "\\\\{-}"',
+    },
   ]
 end

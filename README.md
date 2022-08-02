@@ -21,6 +21,8 @@ It uses the data from the awesome multi-lingual Vim cheat sheet project [https:/
 
 ## Usage
 
+### Search and type Vim commands
+
 Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow down commands returned by typing-in one or more search keys.
 
 - Type `vimc` into Alfred or use a hotkey if set
@@ -28,6 +30,12 @@ Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow d
 - Select a command and the Vim command will automatically be typed into the front-most app
 
 <img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/screencast-01.gif?raw=true' width="800" />
+
+### Quick look cheatsheet
+
+Type `vimc-web` to open Vim Cheatsheet on [https://vim.rtorr.com] in the specified locale.
+
+<img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/quicklook.png?raw=true' width="700" />
 
 ## Locale
 

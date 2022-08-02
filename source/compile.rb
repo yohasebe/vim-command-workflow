@@ -34,7 +34,7 @@ def convert(items)
       {
         "title": "#{v['desc']}".capitalize,
         "subtitle": "#{v['category']}#{ref_only} ⎯  #{v['key']}",
-        "arg": [v['ascript']],
+        "arg": [v['ascript'], v['desc'], v['key']],
         "icon": {
           "type": "file",
           "path": File.join("img", "#{v['catcode']}.png")

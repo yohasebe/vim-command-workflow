@@ -75,7 +75,8 @@
       "positiveLookBehind": "Positive look behind to find <pattern>",
       "positiveLookAhead": "Positive look ahead to find <pattern>",
       "negativeLookBehind": "Negative look behind to find <pattern>",
-      "negativeLookAhead": "Negative look ahead to find <pattern>"
+      "negativeLookAhead": "Negative look ahead to find <pattern>",
+      "nonGreedyQuantifier": "Non-greedy 0 or more quantifier" 
     }
   }
 }
