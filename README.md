@@ -33,7 +33,7 @@ Type `vimc` in Alfred or use the hotkey if you have set up one. You can narrow d
 
 ### Quick look cheatsheet
 
-Type `vimc-web` to open Vim Cheatsheet on [https://vim.rtorr.com] in the specified locale.
+Type `vimc-web` to open Vim Cheatsheet at [https://vim.rtorr.com](https://vim.rtorr.com) in the specified locale.
 
 <img src='https://github.com/yohasebe/vim-command-workflow/blob/main/media/quicklook.png?raw=true' width="700" />
 
