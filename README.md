@@ -1,6 +1,6 @@
 # Vim Command Alfred Workflow
 
-**An Alfred workflow to search Vim command cheat sheet +** ***run commands***
+**An Alfred workflow to search Vim command cheat sheet +** ***type commands***
 
 This is an Alfred workflow that searches a Vim command cheat sheet and sends vim commands directly to the front-most application running Vim, Neovim, etc.
 
